@@ -2,7 +2,7 @@
   "members": [
     {
       "id": "1",
-      "name": "Great-Kul bHadur thapa",
+      "name": "Great-Kul bHadur thapa thapa",
       "profilePicture": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
       "biography": "John Smith Sr. was the family patriarch, born in 1920. He served in World War II and later became a successful businessman. He was known for his wisdom, kindness, and dedication to his family.",
       "birthDate": "1920-03-15",
@@ -241,7 +241,7 @@
       "childrenIds": [],
       "position": {
         "x": 1400,
-        "y": 450
+        "y": 450 
       }
     },
     {
