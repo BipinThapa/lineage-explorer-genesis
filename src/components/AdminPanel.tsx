@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Plus, Download, Upload, Settings } from 'lucide-react';
 import AddMemberModal from './AddMemberModal';
 import { FamilyMember, FamilyTreeData } from '../types/FamilyTree';
+import { useLanguage } from '../contexts/LanguageContext';
 
 interface AdminPanelProps {
   familyData: FamilyTreeData;
@@ -21,6 +22,7 @@ const AdminPanel: React.FC<AdminPanelProps> = ({
 }) => {
   const [showAddModal, setShowAddModal] = useState(false);
   const [showPanel, setShowPanel] = useState(false);
+  const { t } = useLanguage();
 
   const handleImportClick = () => {
     const input = document.createElement('input');
@@ -51,7 +53,7 @@ const AdminPanel: React.FC<AdminPanelProps> = ({
             className="flex items-center gap-2 w-full px-4 py-2 text-left text-green-600 hover:bg-green-50 rounded-lg transition-colors"
           >
             <Plus size={20} />
-            Add Member
+            {t('add.member')}
           </button>
           
           <button
@@ -59,7 +61,7 @@ const AdminPanel: React.FC<AdminPanelProps> = ({
             className="flex items-center gap-2 w-full px-4 py-2 text-left text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
           >
             <Download size={20} />
-            Export Data
+            {t('export.data')}
           </button>
           
           <button
@@ -67,7 +69,7 @@ const AdminPanel: React.FC<AdminPanelProps> = ({
             className="flex items-center gap-2 w-full px-4 py-2 text-left text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
           >
             <Upload size={20} />
-            Import Data
+            {t('import.data')}
           </button>
         </div>
       )}

@@ -5,9 +5,11 @@ import FamilyMemberNode from '../components/FamilyMemberNode';
 import MemberProfile from '../components/MemberProfile';
 import AdminPanel from '../components/AdminPanel';
 import LoginModal from '../components/LoginModal';
+import LanguageSwitcher from '../components/LanguageSwitcher';
 import RelationshipCalculator from '../utils/RelationshipCalculator';
 import { FamilyMember, FamilyTreeData } from '../types/FamilyTree';
 import { generateNodesAndEdges } from '../utils/FamilyTreeUtils';
+import { useLanguage } from '../contexts/LanguageContext';
 import { toast } from 'sonner';
 
 const nodeTypes = {
@@ -22,6 +24,8 @@ const Index = () => {
   const [isAdmin, setIsAdmin] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
   const [focusedMemberId, setFocusedMemberId] = useState<string | null>(null);
+
+  const { t } = useLanguage();
 
   // Load initial data
   useEffect(() => {
@@ -60,7 +64,7 @@ const Index = () => {
       }
     } catch (error) {
       console.error('Error loading family data:', error);
-      toast.error('Failed to load family data');
+      toast.error(t('failed.to.load.family.data'));
     }
   };
 
@@ -134,7 +138,7 @@ const Index = () => {
     }
 
     saveFamilyData({ ...familyData, members: updatedMembers });
-    toast.success('Member added successfully');
+    toast.success(t('member.added.successfully'));
   };
 
   const handleEditMember = (updatedMember: FamilyMember) => {
@@ -143,7 +147,7 @@ const Index = () => {
     );
     saveFamilyData({ ...familyData, members: updatedMembers });
     setSelectedMember(updatedMember); // Update the selected member state
-    toast.success('Member updated successfully');
+    toast.success(t('member.updated.successfully'));
   };
 
   const handleExportData = () => {
@@ -155,7 +159,7 @@ const Index = () => {
     link.download = 'family-tree-data.json';
     link.click();
     URL.revokeObjectURL(url);
-    toast.success('Data exported successfully');
+    toast.success(t('data.exported.successfully'));
   };
 
   const handleImportData = (file: File) => {
@@ -164,9 +168,9 @@ const Index = () => {
       try {
         const importedData = JSON.parse(e.target?.result as string);
         saveFamilyData(importedData);
-        toast.success('Data imported successfully');
+        toast.success(t('data.imported.successfully'));
       } catch (error) {
-        toast.error('Invalid file format');
+        toast.error(t('invalid.file.format'));
       }
     };
     reader.readAsText(file);
@@ -179,7 +183,7 @@ const Index = () => {
 
   const handleLogout = () => {
     setIsAdmin(false);
-    toast.success('Logged out successfully');
+    toast.success(t('logged.out.successfully'));
   };
 
   return (
@@ -187,8 +191,13 @@ const Index = () => {
       {/* Family Name Heading */}
       <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-10">
         <h1 className="text-4xl font-bold text-gray-800 bg-white px-6 py-3 rounded-lg shadow-lg border">
-          {familyData.familyName || "Family Tree"}
+          {familyData.familyName || t('family.tree')}
         </h1>
+      </div>
+
+      {/* Language Switcher */}
+      <div className="absolute top-4 left-4 z-10">
+        <LanguageSwitcher />
       </div>
 
       <div className="absolute top-4 right-4 z-10 flex gap-2">
@@ -196,14 +205,14 @@ const Index = () => {
           onClick={() => setShowLogin(true)}
           className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
         >
-          {isAdmin ? 'Admin Panel' : 'Admin Login'}
+          {isAdmin ? t('admin.panel') : t('admin.login')}
         </button>
         {isAdmin && (
           <button
             onClick={handleLogout}
             className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors"
           >
-            Logout
+            {t('logout')}
           </button>
         )}
         {focusedMemberId && (
@@ -211,7 +220,7 @@ const Index = () => {
             onClick={() => setFocusedMemberId(null)}
             className="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
           >
-            Clear Focus
+            {t('clear.focus')}
           </button>
         )}
       </div>
