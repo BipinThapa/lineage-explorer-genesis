@@ -1,0 +1,140 @@
+
+import React from 'react';
+import { X, Edit } from 'lucide-react';
+import { FamilyMember } from '../types/FamilyTree';
+import RelationshipCalculator from '../utils/RelationshipCalculator';
+
+interface MemberProfileProps {
+  member: FamilyMember;
+  allMembers: FamilyMember[];
+  focusedMemberId?: string | null;
+  onClose: () => void;
+  onEdit?: (member: FamilyMember) => void;
+}
+
+const MemberProfile: React.FC<MemberProfileProps> = ({
+  member,
+  allMembers,
+  focusedMemberId,
+  onClose,
+  onEdit
+}) => {
+  const relationshipCalc = new RelationshipCalculator(allMembers);
+  
+  const getRelationshipToFocused = () => {
+    if (!focusedMemberId || focusedMemberId === member.id) return null;
+    return relationshipCalc.getRelationship(focusedMemberId, member.id);
+  };
+
+  const spouse = member.spouseId ? allMembers.find(m => m.id === member.spouseId) : null;
+  const parents = member.parentIds.map(id => allMembers.find(m => m.id === id)).filter(Boolean);
+  const children = member.childrenIds.map(id => allMembers.find(m => m.id === id)).filter(Boolean);
+
+  return (
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+      <div className="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+        <div className="flex justify-between items-center p-6 border-b">
+          <h2 className="text-2xl font-bold text-gray-800">Family Member Profile</h2>
+          <div className="flex gap-2">
+            {onEdit && (
+              <button
+                onClick={() => onEdit(member)}
+                className="p-2 text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+              >
+                <Edit size={20} />
+              </button>
+            )}
+            <button
+              onClick={onClose}
+              className="p-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors"
+            >
+              <X size={20} />
+            </button>
+          </div>
+        </div>
+
+        <div className="p-6">
+          <div className="flex flex-col md:flex-row gap-6">
+            {member.profilePicture && (
+              <div className="flex-shrink-0">
+                <img
+                  src={member.profilePicture}
+                  alt={member.name}
+                  className="w-48 h-48 rounded-lg object-cover border shadow-lg"
+                />
+              </div>
+            )}
+            
+            <div className="flex-1">
+              <h3 className="text-3xl font-bold text-gray-800 mb-2">{member.name}</h3>
+              
+              {getRelationshipToFocused() && (
+                <div className="mb-4 p-3 bg-blue-50 border border-blue-200 rounded-lg">
+                  <p className="text-blue-700 font-medium">
+                    Relationship: {getRelationshipToFocused()}
+                  </p>
+                </div>
+              )}
+              
+              <div className="space-y-3">
+                {member.birthDate && (
+                  <div>
+                    <span className="font-medium text-gray-700">Born:</span>
+                    <span className="ml-2 text-gray-600">
+                      {new Date(member.birthDate).toLocaleDateString()}
+                    </span>
+                  </div>
+                )}
+                
+                {member.deathDate && (
+                  <div>
+                    <span className="font-medium text-gray-700">Died:</span>
+                    <span className="ml-2 text-gray-600">
+                      {new Date(member.deathDate).toLocaleDateString()}
+                    </span>
+                  </div>
+                )}
+                
+                {spouse && (
+                  <div>
+                    <span className="font-medium text-gray-700">Spouse:</span>
+                    <span className="ml-2 text-gray-600">{spouse.name}</span>
+                  </div>
+                )}
+                
+                {parents.length > 0 && (
+                  <div>
+                    <span className="font-medium text-gray-700">Parents:</span>
+                    <span className="ml-2 text-gray-600">
+                      {parents.map(p => p!.name).join(', ')}
+                    </span>
+                  </div>
+                )}
+                
+                {children.length > 0 && (
+                  <div>
+                    <span className="font-medium text-gray-700">Children:</span>
+                    <span className="ml-2 text-gray-600">
+                      {children.map(c => c!.name).join(', ')}
+                    </span>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+          
+          {member.biography && (
+            <div className="mt-6">
+              <h4 className="text-lg font-semibold text-gray-800 mb-2">Biography</h4>
+              <p className="text-gray-600 leading-relaxed whitespace-pre-wrap">
+                {member.biography}
+              </p>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default MemberProfile;
