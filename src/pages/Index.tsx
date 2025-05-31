@@ -51,7 +51,7 @@ const Index = () => {
       const savedData = localStorage.getItem('familyTreeData');
       if (savedData) {
         const parsedData = JSON.parse(savedData);
-        setFamilyData({ ...parsedData, familyName: parsedData.familyName || "Family Tree" });
+        setFamilyData({ ...parsedData, familyName: parsedData.familyName || "क़ूल परिवार" });
         return;
       }
 
