@@ -48,8 +48,10 @@
         "2"
       ],
       "childrenIds": [
-        "6",
-        "7"
+        "7",
+        "10",
+        "11",
+        "1748723177564"
       ],
       "position": {
         "x": -295.89516742908086,
@@ -88,8 +90,10 @@
       "spouseId": "3",
       "parentIds": [],
       "childrenIds": [
-        "6",
-        "7"
+        "7",
+        "10",
+        "11",
+        "1748723177564"
       ],
       "position": {
         "x": -42.77179847923452,
@@ -120,7 +124,7 @@
       "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img11.jpeg",
       "biography": "च्हबि थापा-Nurse-Female",
       "birthDate": "1960-01-01",
-      "spouseId": "",
+      "spouseId": "12",
       "parentIds": [
         "5",
         "3"
@@ -168,7 +172,7 @@
         "y": 990.7558005381738
       },
       "deathDate": "",
-      "spouseId": ""
+      "spouseId": "10"
     },
     {
       "id": "10",
@@ -202,7 +206,8 @@
         "5"
       ],
       "childrenIds": [
-        "1748724805223"
+        "1748724805223",
+        "1748716213295"
       ],
       "position": {
         "x": 1004.923911524364,
@@ -363,14 +368,14 @@
       "biography": "नेत्रा झेदि मगर-Business-Male",
       "birthDate": "1990-01-01",
       "deathDate": "",
-      "spouseId": "",
+      "spouseId": "1748716213295",
       "parentIds": [],
       "childrenIds": [
         "1748726010084"
       ],
       "position": {
-        "x": 1530.1949498520041,
-        "y": 1318.851173986487
+        "x": 1532.3105010270526,
+        "y": 1331.544481036778
       }
     },
     {
