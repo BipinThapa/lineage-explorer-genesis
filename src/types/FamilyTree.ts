@@ -13,6 +13,7 @@ export interface FamilyMember {
 }
 
 export interface FamilyTreeData {
+  familyName?: string;
   members: FamilyMember[];
 }
 

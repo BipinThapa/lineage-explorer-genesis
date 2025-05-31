@@ -42,7 +42,7 @@ const FamilyMemberNode: React.FC<FamilyMemberNodeProps> = ({ data }) => {
           <h3 className="font-semibold text-lg text-gray-800 mb-1">{member.name}</h3>
           {member.birthDate && (
             <p className="text-sm text-gray-600">
-              Born: {new Date(member.birthDate).getFullYear()}
+              Birthday: {new Date(member.birthDate).getFullYear()}
               {member.deathDate && ` - ${new Date(member.deathDate).getFullYear()}`}
             </p>
           )}

@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useCallback } from 'react';
 import { ReactFlow, Node, Edge, useNodesState, useEdgesState, addEdge, Connection, Background, Controls, MiniMap } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
@@ -18,7 +17,7 @@ const nodeTypes = {
 const Index = () => {
   const [nodes, setNodes, onNodesChange] = useNodesState([]);
   const [edges, setEdges, onEdgesChange] = useEdgesState([]);
-  const [familyData, setFamilyData] = useState<FamilyTreeData>({ members: [] });
+  const [familyData, setFamilyData] = useState<FamilyTreeData>({ members: [], familyName: "Family Tree" });
   const [selectedMember, setSelectedMember] = useState<FamilyMember | null>(null);
   const [isAdmin, setIsAdmin] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
@@ -48,7 +47,7 @@ const Index = () => {
       const savedData = localStorage.getItem('familyTreeData');
       if (savedData) {
         const parsedData = JSON.parse(savedData);
-        setFamilyData(parsedData);
+        setFamilyData({ ...parsedData, familyName: parsedData.familyName || "Family Tree" });
         return;
       }
 
@@ -56,7 +55,7 @@ const Index = () => {
       const response = await fetch('/family-tree-data.json');
       if (response.ok) {
         const data = await response.json();
-        setFamilyData(data);
+        setFamilyData({ ...data, familyName: data.familyName || "Family Tree" });
         localStorage.setItem('familyTreeData', JSON.stringify(data));
       }
     } catch (error) {
@@ -185,6 +184,13 @@ const Index = () => {
 
   return (
     <div className="h-screen w-full relative">
+      {/* Family Name Heading */}
+      <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-10">
+        <h1 className="text-4xl font-bold text-gray-800 bg-white px-6 py-3 rounded-lg shadow-lg border">
+          {familyData.familyName || "Family Tree"}
+        </h1>
+      </div>
+
       <div className="absolute top-4 right-4 z-10 flex gap-2">
         <button
           onClick={() => setShowLogin(true)}
