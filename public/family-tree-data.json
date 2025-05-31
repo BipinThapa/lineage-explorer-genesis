@@ -3,7 +3,7 @@
     {
       "id": "1",
       "name": "प्रेम बहादुर थापा",
-      "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img17.jpeg?token=GHSAT0AAAAAADBWDFUM7KIPFJ4OJU5SWZZY2B3MAVA",
+      "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img17.jpeg",
       "biography": "shri. Prem Bahadur was a solder by profession.",
       "birthDate": "1920-01-01",
       "deathDate": "1960-01-01",
@@ -39,7 +39,7 @@
     {
       "id": "3",
       "name": "क़ूल बहादुर थापा",
-      "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img16.jpeg?token=GHSAT0AAAAAADBWDFUNRIO4DANTCMXQZF4A2B3MJ6Q",
+      "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img16.jpeg",
       "biography": "Kul bahadur thapa-DPS-Male",
       "birthDate": "1940-01-01",
       "spouseId": "5",
@@ -60,7 +60,7 @@
     {
       "id": "4",
       "name": "***** बहादुर थापा",
-      "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img13.jpeg?token=GHSAT0AAAAAADBWDFUMFF5OZ7CO2JNLDBGQ2B3MOYQ",
+      "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img13.jpeg",
       "biography": "***** बहादुर थापा-Solder-Male",
       "birthDate": "1940-01-01",
       "spouseId": "8",
@@ -82,7 +82,7 @@
     {
       "id": "5",
       "name": "स्रि नन्दा थापा",
-      "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img10.jpeg?token=GHSAT0AAAAAADBWDFUMV2TSG3UIGF333PCI2B3ML6A",
+      "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img10.jpeg",
       "biography": "Nanda Thapa-House Wife-Female",
       "birthDate": "1940-01-01",
       "spouseId": "3",
@@ -100,7 +100,7 @@
     {
       "id": "6",
       "name": "सरस्वति थापा",
-      "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img2.jpeg?token=GHSAT0AAAAAADBWDFUM4DNY3UHKNTTMBCNW2B3NPKQ",
+      "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img2.jpeg",
       "biography": "सरस्वति थापा-Nurse-Female",
       "birthDate": "1960-01-01",
       "parentIds": [],
@@ -109,7 +109,7 @@
       ],
       "position": {
         "x": -435.2170922099726,
-        "y": 992.0708878230109
+        "y": 974.9425201567865
       },
       "deathDate": "",
       "spouseId": "1748723177564"
@@ -117,7 +117,7 @@
     {
       "id": "7",
       "name": "च्हबि थापा",
-      "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img11.jpeg?token=GHSAT0AAAAAADBWDFUNQP4P5VV53KL273Y42B3NCVQ",
+      "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img11.jpeg",
       "biography": "च्हबि थापा-Nurse-Female",
       "birthDate": "1960-01-01",
       "spouseId": "",
@@ -156,7 +156,7 @@
     {
       "id": "9",
       "name": "रिना थापा",
-      "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img1.jpeg?token=GHSAT0AAAAAADBWDFUMNDUFVUX473PP26EK2B3M7BA",
+      "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img1.jpeg",
       "biography": "रिना थापा-House Wife- Female",
       "birthDate": "1960-01-01",
       "parentIds": [],
@@ -164,8 +164,8 @@
         "1748725392053"
       ],
       "position": {
-        "x": 119.33508463544716,
-        "y": 977.4337367977771
+        "x": 117.43193267253334,
+        "y": 990.7558005381738
       },
       "deathDate": "",
       "spouseId": ""
@@ -173,7 +173,7 @@
     {
       "id": "10",
       "name": "चन्द्र बहादुर थापा",
-      "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img15.jpeg?token=GHSAT0AAAAAADBWDFUMPQNKT4GSC2HEBC3A2B3M5ZQ",
+      "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img15.jpeg",
       "biography": "चन्द्र बहादुर थापा-Business-Male",
       "birthDate": "1960-01-01",
       "parentIds": [
@@ -193,7 +193,7 @@
     {
       "id": "11",
       "name": "डोर्न्ना बहादुर थापा",
-      "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img5.jpeg?token=GHSAT0AAAAAADBWDFUNTII237YK6WNDLIMW2B3NF7A",
+      "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img5.jpeg",
       "biography": "डोर्न्ना बहादुर थापा-Agriculture officer-Male",
       "birthDate": "1960-01-01",
       "spouseId": "14",
@@ -230,7 +230,7 @@
     {
       "id": "13",
       "name": "निशान्क रास्कोति",
-      "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img3.jpeg?token=GHSAT0AAAAAADBWDFUM4PVZN3662YOZPFTK2B3NT3Q",
+      "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img3.jpeg",
       "biography": "निशान्क रास्कोति-Solder-Male",
       "birthDate": "1994-01-01",
       "parentIds": [
@@ -248,7 +248,7 @@
     {
       "id": "14",
       "name": "नन्दा थापा",
-      "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img4.jpeg?token=GHSAT0AAAAAADBWDFUME2HXIFSJ5HV773EE2B3NGXQ",
+      "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img4.jpeg",
       "biography": "नन्दा थापा-House Wife-Female",
       "birthDate": "1960-01-01",
       "spouseId": "11",
@@ -257,15 +257,15 @@
         "1748724805223"
       ],
       "position": {
-        "x": 1262.656164008094,
-        "y": 970.1905841666066
+        "x": 1260.7530120451804,
+        "y": 975.9000400553482
       },
       "deathDate": ""
     },
     {
       "id": "1748716213295",
       "name": "सोनिआ थापा",
-      "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img8.jpeg?token=GHSAT0AAAAAADBWDFUNY7AQERUYY27373ZQ2B3N4YA",
+      "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img8.jpeg",
       "biography": "सोनिआ थापा-Nurse-Female",
       "birthDate": "1990-01-01",
       "deathDate": "",
@@ -285,7 +285,7 @@
     {
       "id": "1748723177564",
       "name": "जित बहादुर थापा",
-      "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img14.jpeg?token=GHSAT0AAAAAADBWDFUNDNF6XQBTHQ5W44ZA2B3MW4A",
+      "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img14.jpeg",
       "biography": "जित बहादुर थापा-Doctor-Male",
       "birthDate": "1960-01-01",
       "deathDate": "",
@@ -305,7 +305,7 @@
     {
       "id": "1748724805223",
       "name": "बिसाल थापा",
-      "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img12.jpeg?token=GHSAT0AAAAAADBWDFUMYNFCMTUVMVW7SWDQ2B3NQKA",
+      "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img12.jpeg",
       "biography": "बिसाल थापा-Software Engineer-Male",
       "birthDate": "1990-01-01",
       "deathDate": "",
@@ -323,7 +323,7 @@
     {
       "id": "1748725026444",
       "name": "स्नेहा थापा",
-      "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img6.jpeg?token=GHSAT0AAAAAADBWDFUMONBJ6XAVI7VSPIEA2B3NUNA",
+      "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img6.jpeg",
       "biography": "स्नेहा थापा-Student-Female",
       "birthDate": "1980-01-01",
       "deathDate": "",
@@ -341,7 +341,7 @@
     {
       "id": "1748725392053",
       "name": "बिपिन थापा",
-      "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img20.jpeg?token=GHSAT0AAAAAADBWDFUM4UNOIYUNAVDB3UHC2B3N2CA",
+      "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img20.jpeg",
       "biography": "बिपिन थापा-Software Engineer-Male",
       "birthDate": "1992-01-01",
       "deathDate": "",
@@ -359,7 +359,7 @@
     {
       "id": "1748725819011",
       "name": "नेत्रा झेदि मगर",
-      "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img9.jpeg?token=GHSAT0AAAAAADBWDFUNI4W4ICD2IYB2DLU62B3N56A",
+      "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img9.jpeg",
       "biography": "नेत्रा झेदि मगर-Business-Male",
       "birthDate": "1990-01-01",
       "deathDate": "",
@@ -376,7 +376,7 @@
     {
       "id": "1748726010084",
       "name": "सोनिश झेदि मगर",
-      "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img7.jpeg?token=GHSAT0AAAAAADBWDFUMPGASHJJVQERTWZC22B3OEYQ",
+      "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img7.jpeg",
       "biography": "सोनिश झेदि मगर-Student-Male",
       "birthDate": "2020-01-01",
       "deathDate": "",
