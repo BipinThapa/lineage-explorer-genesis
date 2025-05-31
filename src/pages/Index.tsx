@@ -59,7 +59,7 @@ const Index = () => {
       const response = await fetch('/family-tree-data.json');
       if (response.ok) {
         const data = await response.json();
-        setFamilyData({ ...data, familyName: data.familyName || "Family Tree" });
+        setFamilyData({ ...data, familyName: data.familyName || "क़ूल परिवार" });
         localStorage.setItem('familyTreeData', JSON.stringify(data));
       }
     } catch (error) {
