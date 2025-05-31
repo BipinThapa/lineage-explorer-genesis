@@ -234,7 +234,7 @@ const Index = () => {
         onNodeDragStop={handleNodeDrag}
         nodeTypes={nodeTypes}
         fitView
-        className="bg-gray-50"
+        className="bg-[rgb(160,218,229)]"
       >
         <Background />
         <Controls />
