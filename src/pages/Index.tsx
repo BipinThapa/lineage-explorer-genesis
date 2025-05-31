@@ -143,6 +143,7 @@ const Index = () => {
       member.id === updatedMember.id ? updatedMember : member
     );
     saveFamilyData({ ...familyData, members: updatedMembers });
+    setSelectedMember(updatedMember); // Update the selected member state
     toast.success('Member updated successfully');
   };
 
@@ -172,6 +173,16 @@ const Index = () => {
     reader.readAsText(file);
   };
 
+  const handleLogin = () => {
+    setIsAdmin(true);
+    setShowLogin(false);
+  };
+
+  const handleLogout = () => {
+    setIsAdmin(false);
+    toast.success('Logged out successfully');
+  };
+
   return (
     <div className="h-screen w-full relative">
       <div className="absolute top-4 right-4 z-10 flex gap-2">
@@ -181,6 +192,14 @@ const Index = () => {
         >
           {isAdmin ? 'Admin Panel' : 'Admin Login'}
         </button>
+        {isAdmin && (
+          <button
+            onClick={handleLogout}
+            className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors"
+          >
+            Logout
+          </button>
+        )}
         {focusedMemberId && (
           <button
             onClick={() => setFocusedMemberId(null)}
@@ -221,10 +240,7 @@ const Index = () => {
         <LoginModal
           isOpen={showLogin}
           onClose={() => setShowLogin(false)}
-          onLogin={() => {
-            setIsAdmin(true);
-            setShowLogin(false);
-          }}
+          onLogin={handleLogin}
         />
       )}
 
