@@ -1,17 +1,22 @@
-
 {
   "members": [
     {
       "id": "1",
-      "name": "John Smith Sr.",
+      "name": "Great-Kul bHadur thapa",
       "profilePicture": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
       "biography": "John Smith Sr. was the family patriarch, born in 1920. He served in World War II and later became a successful businessman. He was known for his wisdom, kindness, and dedication to his family.",
       "birthDate": "1920-03-15",
       "deathDate": "2010-12-20",
       "spouseId": "2",
       "parentIds": [],
-      "childrenIds": ["3", "4"],
-      "position": { "x": 100, "y": 50 }
+      "childrenIds": [
+        "3",
+        "4"
+      ],
+      "position": {
+        "x": -236.08489184242518,
+        "y": -94.01775871608272
+      }
     },
     {
       "id": "2",
@@ -22,8 +27,14 @@
       "deathDate": "2015-05-10",
       "spouseId": "1",
       "parentIds": [],
-      "childrenIds": ["3", "4"],
-      "position": { "x": 400, "y": 50 }
+      "childrenIds": [
+        "3",
+        "4"
+      ],
+      "position": {
+        "x": 400,
+        "y": 50
+      }
     },
     {
       "id": "3",
@@ -32,9 +43,18 @@
       "biography": "Robert Smith followed in his father's footsteps, becoming an engineer. He's married to Linda and they have two wonderful children. He enjoys hiking and photography in his spare time.",
       "birthDate": "1950-02-14",
       "spouseId": "5",
-      "parentIds": ["1", "2"],
-      "childrenIds": ["6", "7"],
-      "position": { "x": 100, "y": 250 }
+      "parentIds": [
+        "1",
+        "2"
+      ],
+      "childrenIds": [
+        "6",
+        "7"
+      ],
+      "position": {
+        "x": 100,
+        "y": 250
+      }
     },
     {
       "id": "4",
@@ -43,9 +63,19 @@
       "biography": "Susan married David Johnson and moved to California. She's a teacher and has dedicated her life to education. She has three children and loves traveling with her family.",
       "birthDate": "1952-09-08",
       "spouseId": "8",
-      "parentIds": ["1", "2"],
-      "childrenIds": ["9", "10", "11"],
-      "position": { "x": 600, "y": 250 }
+      "parentIds": [
+        "1",
+        "2"
+      ],
+      "childrenIds": [
+        "9",
+        "10",
+        "11"
+      ],
+      "position": {
+        "x": 600,
+        "y": 250
+      }
     },
     {
       "id": "5",
@@ -55,8 +85,14 @@
       "birthDate": "1955-11-30",
       "spouseId": "3",
       "parentIds": [],
-      "childrenIds": ["6", "7"],
-      "position": { "x": 400, "y": 250 }
+      "childrenIds": [
+        "6",
+        "7"
+      ],
+      "position": {
+        "x": 400,
+        "y": 250
+      }
     },
     {
       "id": "6",
@@ -64,9 +100,15 @@
       "profilePicture": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
       "biography": "Michael is a software developer who loves technology and innovation. He's currently single and focuses on his career and hobbies, including rock climbing and video game development.",
       "birthDate": "1985-06-12",
-      "parentIds": ["3", "5"],
+      "parentIds": [
+        "3",
+        "5"
+      ],
       "childrenIds": [],
-      "position": { "x": 50, "y": 450 }
+      "position": {
+        "x": 50,
+        "y": 450
+      }
     },
     {
       "id": "7",
@@ -75,9 +117,17 @@
       "biography": "Sarah is a graphic designer who married Tom Wilson. They have one daughter together. Sarah loves art, design, and spending time with her family. She runs her own design studio.",
       "birthDate": "1988-04-25",
       "spouseId": "12",
-      "parentIds": ["3", "5"],
-      "childrenIds": ["13"],
-      "position": { "x": 250, "y": 450 }
+      "parentIds": [
+        "3",
+        "5"
+      ],
+      "childrenIds": [
+        "13"
+      ],
+      "position": {
+        "x": 250,
+        "y": 450
+      }
     },
     {
       "id": "8",
@@ -87,8 +137,15 @@
       "birthDate": "1951-01-18",
       "spouseId": "4",
       "parentIds": [],
-      "childrenIds": ["9", "10", "11"],
-      "position": { "x": 900, "y": 250 }
+      "childrenIds": [
+        "9",
+        "10",
+        "11"
+      ],
+      "position": {
+        "x": 900,
+        "y": 250
+      }
     },
     {
       "id": "9",
@@ -96,9 +153,15 @@
       "profilePicture": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face",
       "biography": "Emily is a veterinarian who loves animals. She's currently pursuing her doctoral degree and hopes to open her own animal clinic. She enjoys hiking and wildlife photography.",
       "birthDate": "1982-08-03",
-      "parentIds": ["4", "8"],
+      "parentIds": [
+        "4",
+        "8"
+      ],
       "childrenIds": [],
-      "position": { "x": 700, "y": 450 }
+      "position": {
+        "x": 700,
+        "y": 450
+      }
     },
     {
       "id": "10",
@@ -106,9 +169,15 @@
       "profilePicture": "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=150&h=150&fit=crop&crop=face",
       "biography": "James is a musician and music teacher. He plays multiple instruments and performs in a local band. He's passionate about music education and teaches at the community college.",
       "birthDate": "1984-12-15",
-      "parentIds": ["4", "8"],
+      "parentIds": [
+        "4",
+        "8"
+      ],
       "childrenIds": [],
-      "position": { "x": 900, "y": 450 }
+      "position": {
+        "x": 900,
+        "y": 450
+      }
     },
     {
       "id": "11",
@@ -117,9 +186,15 @@
       "biography": "Lisa is the youngest of the Johnson children. She's a social worker dedicated to helping children and families. She's married to Mark and they're expecting their first child.",
       "birthDate": "1987-10-28",
       "spouseId": "14",
-      "parentIds": ["4", "8"],
+      "parentIds": [
+        "4",
+        "8"
+      ],
       "childrenIds": [],
-      "position": { "x": 1100, "y": 450 }
+      "position": {
+        "x": 1100,
+        "y": 450
+      }
     },
     {
       "id": "12",
@@ -129,18 +204,31 @@
       "birthDate": "1985-09-07",
       "spouseId": "7",
       "parentIds": [],
-      "childrenIds": ["13"],
-      "position": { "x": 550, "y": 450 }
+      "childrenIds": [
+        "13"
+      ],
+      "position": {
+        "x": 550,
+        "y": 450
+      }
     },
     {
       "id": "13",
-      "name": "Emma Wilson",
+      "name": "Sneha Thapa",
       "profilePicture": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=150&h=150&fit=crop&crop=face",
       "biography": "Emma is a bright 8-year-old who loves reading, drawing, and playing soccer. She's in third grade and enjoys school, especially art class. She dreams of becoming an artist like her mom.",
       "birthDate": "2016-03-20",
-      "parentIds": ["7", "12"],
+      "parentIds": [
+        "7",
+        "12"
+      ],
       "childrenIds": [],
-      "position": { "x": 400, "y": 650 }
+      "position": {
+        "x": 1640.5430841823468,
+        "y": 887.1164629259928
+      },
+      "deathDate": "",
+      "spouseId": ""
     },
     {
       "id": "14",
@@ -151,7 +239,26 @@
       "spouseId": "11",
       "parentIds": [],
       "childrenIds": [],
-      "position": { "x": 1400, "y": 450 }
+      "position": {
+        "x": 1400,
+        "y": 450
+      }
+    },
+    {
+      "id": "1748716213295",
+      "name": "Nishank Thapa",
+      "profilePicture": "",
+      "biography": "",
+      "birthDate": "",
+      "deathDate": "",
+      "spouseId": "",
+      "parentIds": [],
+      "childrenIds": [],
+      "position": {
+        "x": 1412.4594738677154,
+        "y": 64.36039633355881
+      }
     }
-  ]
+  ],
+  "familyName": "Family Tree"
 }
