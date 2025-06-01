@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { X, User, Heart, Users } from 'lucide-react';
+import { X, User, Heart, Users, Phone, Mail, Globe, GenderMale, GenderFemale  } from 'lucide-react';
 import { FamilyMember } from '../types/FamilyTree';
 
 interface AddMemberModalProps {
@@ -24,7 +24,11 @@ const AddMemberModal: React.FC<AddMemberModalProps> = ({
     deathDate: '',
     spouseId: '',
     parentIds: [] as string[],
-    childrenIds: [] as string[]
+    childrenIds: [] as string[],
+    gender: '',
+    socialMediaLink: '',
+    phone: '',
+    email: ''
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -109,6 +113,48 @@ const AddMemberModal: React.FC<AddMemberModalProps> = ({
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
+                Gender
+              </label>
+              <select
+                value={formData.gender}
+                onChange={(e) => setFormData(prev => ({ ...prev, gender: e.target.value }))}
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              >
+                <option value="">Select gender...</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                <Phone size={16} className="inline mr-1" />
+                Phone Number
+              </label>
+              <input
+                type="tel"
+                value={formData.phone}
+                onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                <Mail size={16} className="inline mr-1" />
+                Email Address
+              </label>
+              <input
+                type="email"
+                value={formData.email}
+                onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
+            </div>
+            
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
                 Profile Picture URL
               </label>
               <input
@@ -118,7 +164,18 @@ const AddMemberModal: React.FC<AddMemberModalProps> = ({
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
             </div>
-
+             <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                <Globe size={16} className="inline mr-1" />
+                Social Media Link
+              </label>
+              <input
+                type="url"
+                value={formData.socialMediaLink}
+                onChange={(e) => setFormData(prev => ({ ...prev, socialMediaLink: e.target.value }))}
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
+            </div>
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Birth Date
