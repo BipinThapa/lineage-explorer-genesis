@@ -50,10 +50,10 @@ export default class RelationshipCalculator {
     if (fromMember.childrenIds.includes(toId)) {
       const child = this.members.find(m => m.id === toId);
       // Could be more specific like Son/Daughter if we had gender data
-      if (fromMember?.biography) {
-        if (fromMember.biography.startsWith('M-')) {
+      if (child?.biography) {
+        if (child.biography.startsWith('M-')) {
           return 'छोरा';
-        } else if (fromMember.biography.startsWith('F-')) {
+        } else if (child.biography.startsWith('F-')) {
           return 'छोरी';
         }
         else{
@@ -71,10 +71,11 @@ export default class RelationshipCalculator {
       if (sharedParents.length === fromMember.parentIds.length && 
           sharedParents.length === toMember.parentIds.length) {
        // return 'Sibling';
-       if (fromMember?.biography) {
-        if (fromMember.biography.startsWith('M-')) {
+       const Sibling = this.members.find(m => m.id === toId);
+       if (Sibling?.biography) {
+        if (Sibling.biography.startsWith('M-')) {
           return 'भाइ';
-        } else if (fromMember.biography.startsWith('F-')) {
+        } else if (Sibling.biography.startsWith('F-')) {
           return 'बहिनी';
         }
         else{
@@ -83,10 +84,11 @@ export default class RelationshipCalculator {
       }
       } else {
         //return 'Half-sibling';
-        if (fromMember?.biography) {
-          if (fromMember.biography.startsWith('M-')) {
+        const Halfsibling = this.members.find(m => m.id === toId);
+        if (Halfsibling?.biography) {
+          if (Halfsibling.biography.startsWith('M-')) {
             return 'अर्ध भाइ';
-          } else if (fromMember.biography.startsWith('F-')) {
+          } else if (Halfsibling.biography.startsWith('F-')) {
             return 'अर्ध बहिनी';
           }
           else{
@@ -103,10 +105,11 @@ export default class RelationshipCalculator {
         if (spouse.parentIds.includes(toId)) 
         {
           //return 'Parent-in-law';
-          if (fromMember?.biography) {
-            if (fromMember.biography.startsWith('M-')) {
+          const Parentinlaw = this.members.find(m => m.id === toId);
+          if (Parentinlaw?.biography) {
+            if (Parentinlaw.biography.startsWith('M-')) {
               return 'ससुरा';
-            } else if (fromMember.biography.startsWith('F-')) {
+            } else if (Parentinlaw.biography.startsWith('F-')) {
               return 'सासु';
             }
             else{
@@ -119,10 +122,11 @@ export default class RelationshipCalculator {
         if (spouse.childrenIds.includes(toId))
         {
           //return 'Child-in-law';
-          if (fromMember?.biography) {
-            if (fromMember.biography.startsWith('M-')) {
+          const Childinlaw = this.members.find(m => m.id === toId);
+          if (Childinlaw?.biography) {
+            if (Childinlaw.biography.startsWith('M-')) {
               return 'ज्वाइँ';
-            } else if (fromMember.biography.startsWith('F-')) {
+            } else if (Childinlaw.biography.startsWith('F-')) {
               return 'बुहारी';
             }
             else{
@@ -139,10 +143,11 @@ export default class RelationshipCalculator {
         if (spouseSharedParents.length > 0) 
         {
           //return 'Sibling-in-law';
-          if (fromMember?.biography) {
-            if (fromMember.biography.startsWith('M-')) {
+          const Siblinginlaw = this.members.find(m => m.id === toId);
+          if (Siblinginlaw?.biography) {
+            if (Siblinginlaw.biography.startsWith('M-')) {
               return 'देवर';
-            } else if (fromMember.biography.startsWith('F-')) {
+            } else if (Siblinginlaw.biography.startsWith('F-')) {
               return 'भाउजू';
             }
             else{
@@ -170,10 +175,11 @@ export default class RelationshipCalculator {
       const parent = this.members.find(m => m.id === parentId);
       if (parent && parent.parentIds.includes(toId)) {
         //return 'Grandparent';
-        if (fromMember?.biography) {
-          if (fromMember.biography.startsWith('M-')) {
+        const Grandparent = this.members.find(m => m.id === toId);
+        if (Grandparent?.biography) {
+          if (Grandparent.biography.startsWith('M-')) {
             return 'बाजे';
-          } else if (fromMember.biography.startsWith('F-')) {
+          } else if (Grandparent.biography.startsWith('F-')) {
             return 'बज्यै';
           }
           else{
@@ -188,10 +194,11 @@ export default class RelationshipCalculator {
       const child = this.members.find(m => m.id === childId);
       if (child && child.childrenIds.includes(toId)) {
         //return 'Grandchild';
-        if (fromMember?.biography) {
-          if (fromMember.biography.startsWith('M-')) {
+        const Grandchild = this.members.find(m => m.id === toId);
+        if (Grandchild?.biography) {
+          if (Grandchild.biography.startsWith('M-')) {
             return 'नाति';
-          } else if (fromMember.biography.startsWith('F-')) {
+          } else if (Grandchild.biography.startsWith('F-')) {
             return 'नातिनी';
           }
           else{
@@ -209,10 +216,11 @@ export default class RelationshipCalculator {
           const grandparent = this.members.find(m => m.id === grandparentId);
           if (grandparent && grandparent.parentIds.includes(toId)) {
             //return 'Great-grandparent';
-            if (fromMember?.biography) {
-              if (fromMember.biography.startsWith('M-')) {
+            const Greatgrandparent = this.members.find(m => m.id === toId);
+            if (Greatgrandparent?.biography) {
+              if (Greatgrandparent.biography.startsWith('M-')) {
                 return 'परबाजे';
-              } else if (fromMember.biography.startsWith('F-')) {
+              } else if (Greatgrandparent.biography.startsWith('F-')) {
                 return 'परबज्यै';
               }
               else{
@@ -232,10 +240,11 @@ export default class RelationshipCalculator {
           const grandchild = this.members.find(m => m.id === grandchildId);
           if (grandchild && grandchild.childrenIds.includes(toId)) {
             //return 'Great-grandchild';
-            if (fromMember?.biography) {
-              if (fromMember.biography.startsWith('M-')) {
+            const Greatgrandchild = this.members.find(m => m.id === toId);
+            if (Greatgrandchild?.biography) {
+              if (Greatgrandchild.biography.startsWith('M-')) {
                 return 'परनाति';
-              } else if (fromMember.biography.startsWith('F-')) {
+              } else if (Greatgrandchild.biography.startsWith('F-')) {
                 return 'परनातिनी';
               }
               else{
@@ -257,10 +266,11 @@ export default class RelationshipCalculator {
             for (const auntUncleId of grandparent.childrenIds) {
               if (auntUncleId !== parentId && auntUncleId === toId) {
                 //return 'Aunt/Uncle';
-                if (fromMember?.biography) {
-                  if (fromMember.biography.startsWith('M-')) {
+                const Aunt = this.members.find(m => m.id === toId);
+                if (Aunt?.biography) {
+                  if (Aunt.biography.startsWith('M-')) {
                     return 'काका';
-                  } else if (fromMember.biography.startsWith('F-')) {
+                  } else if (Aunt.biography.startsWith('F-')) {
                     return 'काकी';
                   }
                   else{
@@ -287,10 +297,11 @@ export default class RelationshipCalculator {
                 for (const greatAuntUncleId of greatGrandparent.childrenIds) {
                   if (greatAuntUncleId !== grandparentId && greatAuntUncleId === toId) {
                     //return 'Great-aunt/Great-uncle';
-                    if (fromMember?.biography) {
-                      if (fromMember.biography.startsWith('M-')) {
+                    const Greataunt = this.members.find(m => m.id === toId);
+                    if (Greataunt?.biography) {
+                      if (Greataunt.biography.startsWith('M-')) {
                         return 'बुबाका काका';
-                      } else if (fromMember.biography.startsWith('F-')) {
+                      } else if (Greataunt.biography.startsWith('F-')) {
                         return 'बुबाकी काकी';
                       }
                       else{
@@ -315,10 +326,11 @@ export default class RelationshipCalculator {
             const sibling = this.members.find(m => m.id === siblingId);
             if (sibling && sibling.childrenIds.includes(toId)) {
               //return 'Niece/Nephew';
-              if (fromMember?.biography) {
-                if (fromMember.biography.startsWith('M-')) {
+              const Niece = this.members.find(m => m.id === toId);
+              if (Niece?.biography) {
+                if (Niece.biography.startsWith('M-')) {
                   return 'भतिजो';
-                } else if (fromMember.biography.startsWith('F-')) {
+                } else if (Niece.biography.startsWith('F-')) {
                   return 'भतिजी';
                 }
                 else{
@@ -343,10 +355,11 @@ export default class RelationshipCalculator {
                 const nieceNephew = this.members.find(m => m.id === nieceNephewId);
                 if (nieceNephew && nieceNephew.childrenIds.includes(toId)) {
                   //return 'Grand-niece/Grand-nephew';
-                  if (fromMember?.biography) {
-                    if (fromMember.biography.startsWith('M-')) {
+                  const Grandniece = this.members.find(m => m.id === toId);
+                  if (Grandniece?.biography) {
+                    if (Grandniece.biography.startsWith('M-')) {
                       return 'भतिजाको छोरा';
-                    } else if (fromMember.biography.startsWith('F-')) {
+                    } else if (Grandniece.biography.startsWith('F-')) {
                       return 'भतिजाको छोरी';
                     }
                     else{
@@ -373,10 +386,11 @@ export default class RelationshipCalculator {
                 const auntUncle = this.members.find(m => m.id === auntUncleId);
                 if (auntUncle && auntUncle.childrenIds.includes(toId)) {
                   //return 'First cousin';
-                  if (fromMember?.biography) {
-                    if (fromMember.biography.startsWith('M-')) {
+                  const Firstcousin = this.members.find(m => m.id === toId);
+                  if (Firstcousin?.biography) {
+                    if (Firstcousin.biography.startsWith('M-')) {
                       return 'चोचे भाइ';
-                    } else if (fromMember.biography.startsWith('F-')) {
+                    } else if (Firstcousin.biography.startsWith('F-')) {
                       return 'चोचे बहिनी';
                     }
                     else{
@@ -409,10 +423,11 @@ export default class RelationshipCalculator {
                         const firstCousinOnceRemoved = this.members.find(m => m.id === firstCousinOnceRemovedId);
                         if (firstCousinOnceRemoved && firstCousinOnceRemoved.childrenIds.includes(toId)) {
                           //return 'Second cousin';
-                          if (firstCousinOnceRemoved?.biography) {
-                            if (firstCousinOnceRemoved.biography.startsWith('M-')) {
+                          const Secondcousin = this.members.find(m => m.id === toId);
+                          if (Secondcousin?.biography) {
+                            if (Secondcousin.biography.startsWith('M-')) {
                               return 'दोस्रो चोचे भाइ';
-                            } else if (firstCousinOnceRemoved.biography.startsWith('F-')) {
+                            } else if (Secondcousin.biography.startsWith('F-')) {
                               return 'दोस्रो चोचे बहिनी';
                             }
                             else{
@@ -447,10 +462,11 @@ export default class RelationshipCalculator {
                     const grandAuntUncle = this.members.find(m => m.id === grandAuntUncleId);
                     if (grandAuntUncle && grandAuntUncle.childrenIds.includes(toId)) {
                       //return 'First cousin once removed';
-                      if (grandAuntUncle?.biography) {
-                        if (grandAuntUncle.biography.startsWith('M-')) {
+                      const Firstcousinonce = this.members.find(m => m.id === toId);
+                      if (Firstcousinonce?.biography) {
+                        if (Firstcousinonce.biography.startsWith('M-')) {
                           return 'चोचे नाति';
-                        } else if (grandAuntUncle.biography.startsWith('F-')) {
+                        } else if (Firstcousinonce.biography.startsWith('F-')) {
                           return 'चोचे नातिनी';
                         }
                         else{
@@ -477,10 +493,11 @@ export default class RelationshipCalculator {
                     const firstCousin = this.members.find(m => m.id === firstCousinId);
                     if (firstCousin && firstCousin.childrenIds.includes(toId)) {
                       //return 'First cousin once removed';
-                      if (firstCousin?.biography) {
-                        if (firstCousin.biography.startsWith('M-')) {
+                      const resultCousin = this.members.find(m => m.id === toId);
+                      if (resultCousin?.biography) {
+                        if (resultCousin.biography.startsWith('M-')) {
                           return 'चोचे नाति';
-                        } else if (firstCousin.biography.startsWith('F-')) {
+                        } else if (resultCousin.biography.startsWith('F-')) {
                           return 'चोचे नातिनी';
                         }
                         else{
