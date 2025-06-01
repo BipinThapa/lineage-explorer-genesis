@@ -57,9 +57,6 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, onLogin }) => 
                 required
               />
             </div>
-            <p className="text-xs text-gray-500 mt-1">
-              {t('default.password')}
-            </p>
           </div>
 
           <div className="flex gap-3 pt-4">
