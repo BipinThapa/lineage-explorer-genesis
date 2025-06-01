@@ -20,10 +20,11 @@ export default class RelationshipCalculator {
     if (fromMember.spouseId === toId) 
     {
       //return 'Spouse';
-      if (fromMember?.biography) {
-        if (fromMember.biography.startsWith('M-')) {
+      const result = this.members.find(m => m.id === toId);
+      if (result?.biography) {
+        if (result.biography.startsWith('M-')) {
           return 'लोग्ने';
-        } else if (fromMember.biography.startsWith('F-')) {
+        } else if (result.biography.startsWith('F-')) {
           return 'पत्नी';
         }
         else{
