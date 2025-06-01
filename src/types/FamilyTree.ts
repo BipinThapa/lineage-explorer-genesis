@@ -1,4 +1,3 @@
-
 export interface FamilyMember {
   id: string;
   name: string;
@@ -10,6 +9,10 @@ export interface FamilyMember {
   parentIds: string[];
   childrenIds: string[];
   position: { x: number; y: number };
+  gender?: string;
+  phoneNumber?: string;
+  email?: string;
+  socialMediaLink?: string;
 }
 
 export interface FamilyTreeData {
