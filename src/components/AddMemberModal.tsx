@@ -47,7 +47,11 @@ const AddMemberModal: React.FC<AddMemberModalProps> = ({
       deathDate: '',
       spouseId: '',
       parentIds: [],
-      childrenIds: []
+      childrenIds: [],
+      gender: '',
+      socialMediaLink: '',
+      phone: '',
+      email: ''
     });
     onClose();
   };
