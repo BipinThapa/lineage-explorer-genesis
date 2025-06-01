@@ -1,8 +1,19 @@
 import React, { useState } from 'react';
-import { X, Edit } from 'lucide-react';
+import { X, Edit, Trash2 } from 'lucide-react';
 import { FamilyMember } from '../types/FamilyTree';
 import RelationshipCalculator from '../utils/RelationshipCalculator';
 import EditMemberModal from './EditMemberModal';
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from '@/components/ui/alert-dialog';
 
 interface MemberProfileProps {
   member: FamilyMember;
@@ -10,6 +21,7 @@ interface MemberProfileProps {
   focusedMemberId?: string | null;
   onClose: () => void;
   onEdit?: (member: FamilyMember) => void;
+  onDelete?: (memberId: string) => void;
 }
 
 const MemberProfile: React.FC<MemberProfileProps> = ({
@@ -17,7 +29,8 @@ const MemberProfile: React.FC<MemberProfileProps> = ({
   allMembers,
   focusedMemberId,
   onClose,
-  onEdit
+  onEdit,
+  onDelete
 }) => {
   const [showEditModal, setShowEditModal] = useState(false);
   const relationshipCalc = new RelationshipCalculator(allMembers);
@@ -42,6 +55,13 @@ const MemberProfile: React.FC<MemberProfileProps> = ({
     setShowEditModal(false);
   };
 
+  const handleDelete = () => {
+    if (onDelete) {
+      onDelete(member.id);
+      onClose();
+    }
+  };
+
   return (
     <>
       <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
@@ -56,6 +76,29 @@ const MemberProfile: React.FC<MemberProfileProps> = ({
                 >
                   <Edit size={20} />
                 </button>
+              )}
+              {onDelete && (
+                <AlertDialog>
+                  <AlertDialogTrigger asChild>
+                    <button className="p-2 text-red-600 hover:bg-red-50 rounded-lg transition-colors">
+                      <Trash2 size={20} />
+                    </button>
+                  </AlertDialogTrigger>
+                  <AlertDialogContent>
+                    <AlertDialogHeader>
+                      <AlertDialogTitle>सदस्य मेटाउनुहुन्छ?</AlertDialogTitle>
+                      <AlertDialogDescription>
+                        यो कार्य फिर्ता गर्न सकिँदैन। यसले {member.name} लाई स्थायी रूपमा मेटाउनेछ र सबै सम्बन्धित जानकारी हटाउनेछ।
+                      </AlertDialogDescription>
+                    </AlertDialogHeader>
+                    <AlertDialogFooter>
+                      <AlertDialogCancel>रद्द गर्नुहोस्</AlertDialogCancel>
+                      <AlertDialogAction onClick={handleDelete} className="bg-red-600 hover:bg-red-700">
+                        मेटाउनुहोस्
+                      </AlertDialogAction>
+                    </AlertDialogFooter>
+                  </AlertDialogContent>
+                </AlertDialog>
               )}
               <button
                 onClick={onClose}

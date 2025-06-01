@@ -190,6 +190,27 @@ const Index = () => {
     toast.success(t('logged.out.successfully'));
   };
 
+  const handleDeleteMember = (memberId: string) => {
+    const updatedMembers = familyData.members.filter(member => member.id !== memberId);
+    
+    // Clean up relationships - remove references to deleted member
+    updatedMembers.forEach(member => {
+      // Remove from spouse relationships
+      if (member.spouseId === memberId) {
+        member.spouseId = undefined;
+      }
+      
+      // Remove from parent relationships
+      member.parentIds = member.parentIds.filter(id => id !== memberId);
+      
+      // Remove from children relationships
+      member.childrenIds = member.childrenIds.filter(id => id !== memberId);
+    });
+
+    saveFamilyData({ ...familyData, members: updatedMembers });
+    toast.success(t('member.deleted.successfully'));
+  };
+
   return (
     <div className="h-screen w-full relative">
       {/* Family Name Heading */}
@@ -252,6 +273,7 @@ const Index = () => {
           focusedMemberId={focusedMemberId}
           onClose={() => setSelectedMember(null)}
           onEdit={isAdmin ? handleEditMember : undefined}
+          onDelete={isAdmin ? handleDeleteMember : undefined}
         />
       )}
 
@@ -268,6 +290,7 @@ const Index = () => {
           familyData={familyData}
           onAddMember={handleAddMember}
           onEditMember={handleEditMember}
+          onDeleteMember={handleDeleteMember}
           onExportData={handleExportData}
           onImportData={handleImportData}
         />

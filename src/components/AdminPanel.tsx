@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Plus, Download, Upload, Settings } from 'lucide-react';
 import AddMemberModal from './AddMemberModal';
@@ -9,6 +8,7 @@ interface AdminPanelProps {
   familyData: FamilyTreeData;
   onAddMember: (member: Partial<FamilyMember>) => void;
   onEditMember: (member: FamilyMember) => void;
+  onDeleteMember: (memberId: string) => void;
   onExportData: () => void;
   onImportData: (file: File) => void;
 }
@@ -17,6 +17,7 @@ const AdminPanel: React.FC<AdminPanelProps> = ({
   familyData,
   onAddMember,
   onEditMember,
+  onDeleteMember,
   onExportData,
   onImportData
 }) => {
