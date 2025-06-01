@@ -93,7 +93,7 @@ const MemberProfile: React.FC<MemberProfileProps> = ({
                 <div className="space-y-3">
                   {member.birthDate && (
                     <div>
-                      <span className="font-medium text-gray-700">Birthday:</span>
+                      <span className="font-medium text-gray-700">Born:</span>
                       <span className="ml-2 text-gray-600">
                         {new Date(member.birthDate).toLocaleDateString()}
                       </span>
