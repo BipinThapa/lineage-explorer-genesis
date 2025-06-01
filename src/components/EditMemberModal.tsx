@@ -26,7 +26,11 @@ const EditMemberModal: React.FC<EditMemberModalProps> = ({
     deathDate: '',
     spouseId: '',
     parentIds: [] as string[],
-    childrenIds: [] as string[]
+    childrenIds: [] as string[],
+    gender: '',
+    socialMediaLink: '',
+    phoneNumber: '',
+    email: ''
   });
 
   useEffect(() => {
@@ -39,7 +43,11 @@ const EditMemberModal: React.FC<EditMemberModalProps> = ({
         deathDate: member.deathDate || '',
         spouseId: member.spouseId || '',
         parentIds: member.parentIds,
-        childrenIds: member.childrenIds
+        childrenIds: member.childrenIds,
+        gender: member.gender || '',
+        socialMediaLink: member.socialMediaLink || '',
+        phoneNumber: member.phoneNumber || '',
+        email: member.email || ''
       });
     }
   }, [member]);
@@ -117,6 +125,22 @@ const EditMemberModal: React.FC<EditMemberModalProps> = ({
               />
             </div>
 
+             <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Gender
+              </label>
+              <select
+                value={formData.gender}
+                onChange={(e) => setFormData(prev => ({ ...prev, gender: e.target.value }))}
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg"
+              >
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Profile Picture URL
@@ -129,6 +153,42 @@ const EditMemberModal: React.FC<EditMemberModalProps> = ({
               />
             </div>
 
+             <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Social Media Link
+              </label>
+              <input
+                type="url"
+                value={formData.socialMediaLink}
+                onChange={(e) => setFormData(prev => ({ ...prev, socialMediaLink: e.target.value }))}
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Phone Number
+              </label>
+              <input
+                type="tel"
+                value={formData.phoneNumber}
+                onChange={(e) => setFormData(prev => ({ ...prev, phoneNumber: e.target.value }))}
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Email Address
+              </label>
+              <input
+                type="email"
+                value={formData.email}
+                onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg"
+              />
+            </div>
+            
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Birth Date
