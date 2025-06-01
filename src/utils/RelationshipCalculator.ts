@@ -37,9 +37,9 @@ export default class RelationshipCalculator {
       // Could be more specific like Father/Mother if we had gender data
       if (fromMember?.biography) {
         if (fromMember.biography.startsWith('M-')) {
-          rreturn 'आमा';
+          return 'आमा';
         } else if (fromMember.biography.startsWith('F-')) {
-         eturn 'बुबा'; 
+         return 'बुबा'; 
         }
         else{
           return 'अभिभावक';
