@@ -22,9 +22,9 @@ export default class RelationshipCalculator {
       //return 'Spouse';
       if (fromMember?.biography) {
         if (fromMember.biography.startsWith('M-')) {
-          return 'पत्नी';
-        } else if (fromMember.biography.startsWith('F-')) {          
           return 'लोग्ने';
+        } else if (fromMember.biography.startsWith('F-')) {
+          return 'पत्नी';
         }
         else{
           return 'पति/पत्नी';
@@ -37,9 +37,9 @@ export default class RelationshipCalculator {
       // Could be more specific like Father/Mother if we had gender data
       if (fromMember?.biography) {
         if (fromMember.biography.startsWith('M-')) {
-          return 'आमा';
+          return 'बुबा';
         } else if (fromMember.biography.startsWith('F-')) {
-         return 'बुबा'; 
+          return 'आमा';
         }
         else{
           return 'अभिभावक';
@@ -51,9 +51,9 @@ export default class RelationshipCalculator {
       // Could be more specific like Son/Daughter if we had gender data
       if (fromMember?.biography) {
         if (fromMember.biography.startsWith('M-')) {
-          return 'छोरी';
-        } else if (fromMember.biography.startsWith('F-')) {
           return 'छोरा';
+        } else if (fromMember.biography.startsWith('F-')) {
+          return 'छोरी';
         }
         else{
           return 'सन्तान';
@@ -72,9 +72,9 @@ export default class RelationshipCalculator {
        // return 'Sibling';
        if (fromMember?.biography) {
         if (fromMember.biography.startsWith('M-')) {
-          return 'बहिनी';
-        } else if (fromMember.biography.startsWith('F-')) {
           return 'भाइ';
+        } else if (fromMember.biography.startsWith('F-')) {
+          return 'बहिनी';
         }
         else{
           return 'भाइबहिनी';
@@ -84,9 +84,9 @@ export default class RelationshipCalculator {
         //return 'Half-sibling';
         if (fromMember?.biography) {
           if (fromMember.biography.startsWith('M-')) {
-            return 'अर्ध बहिनी';
-          } else if (fromMember.biography.startsWith('F-')) {
             return 'अर्ध भाइ';
+          } else if (fromMember.biography.startsWith('F-')) {
+            return 'अर्ध बहिनी';
           }
           else{
             return 'अर्ध भाइ/बहिनी';
@@ -104,9 +104,9 @@ export default class RelationshipCalculator {
           //return 'Parent-in-law';
           if (fromMember?.biography) {
             if (fromMember.biography.startsWith('M-')) {
-              return 'सासु';
-            } else if (fromMember.biography.startsWith('F-')) {
               return 'ससुरा';
+            } else if (fromMember.biography.startsWith('F-')) {
+              return 'सासु';
             }
             else{
               return 'ससुरा/सासु';
@@ -120,9 +120,9 @@ export default class RelationshipCalculator {
           //return 'Child-in-law';
           if (fromMember?.biography) {
             if (fromMember.biography.startsWith('M-')) {
-              return 'बुहारी';
-            } else if (fromMember.biography.startsWith('F-')) {
               return 'ज्वाइँ';
+            } else if (fromMember.biography.startsWith('F-')) {
+              return 'बुहारी';
             }
             else{
               return 'ज्वाइँ/बुहारी';
@@ -140,9 +140,9 @@ export default class RelationshipCalculator {
           //return 'Sibling-in-law';
           if (fromMember?.biography) {
             if (fromMember.biography.startsWith('M-')) {
-              return 'भाउजू';
-            } else if (fromMember.biography.startsWith('F-')) {
               return 'देवर';
+            } else if (fromMember.biography.startsWith('F-')) {
+              return 'भाउजू';
             }
             else{
               return 'देवर/भाउजू';
@@ -171,9 +171,9 @@ export default class RelationshipCalculator {
         //return 'Grandparent';
         if (fromMember?.biography) {
           if (fromMember.biography.startsWith('M-')) {
-            return 'बज्यै';
-          } else if (fromMember.biography.startsWith('F-')) {
             return 'बाजे';
+          } else if (fromMember.biography.startsWith('F-')) {
+            return 'बज्यै';
           }
           else{
             return 'हजुरआमा/बुबा';
@@ -189,9 +189,9 @@ export default class RelationshipCalculator {
         //return 'Grandchild';
         if (fromMember?.biography) {
           if (fromMember.biography.startsWith('M-')) {
-            return 'नातिनी';
-          } else if (fromMember.biography.startsWith('F-')) {
             return 'नाति';
+          } else if (fromMember.biography.startsWith('F-')) {
+            return 'नातिनी';
           }
           else{
             return 'नातिनाति';
@@ -210,9 +210,9 @@ export default class RelationshipCalculator {
             //return 'Great-grandparent';
             if (fromMember?.biography) {
               if (fromMember.biography.startsWith('M-')) {
-                return 'परबज्यै';
-              } else if (fromMember.biography.startsWith('F-')) {
                 return 'परबाजे';
+              } else if (fromMember.biography.startsWith('F-')) {
+                return 'परबज्यै';
               }
               else{
                 return 'परबाजे/बज्यै';
@@ -233,9 +233,9 @@ export default class RelationshipCalculator {
             //return 'Great-grandchild';
             if (fromMember?.biography) {
               if (fromMember.biography.startsWith('M-')) {
-                return 'परनातिनी';
-              } else if (fromMember.biography.startsWith('F-')) {
                 return 'परनाति';
+              } else if (fromMember.biography.startsWith('F-')) {
+                return 'परनातिनी';
               }
               else{
                 return 'परनाति/नातिनी';
@@ -258,9 +258,9 @@ export default class RelationshipCalculator {
                 //return 'Aunt/Uncle';
                 if (fromMember?.biography) {
                   if (fromMember.biography.startsWith('M-')) {
-                    return 'काकी';
-                  } else if (fromMember.biography.startsWith('F-')) {
                     return 'काका';
+                  } else if (fromMember.biography.startsWith('F-')) {
+                    return 'काकी';
                   }
                   else{
                     return 'काका/काकी';
@@ -288,9 +288,9 @@ export default class RelationshipCalculator {
                     //return 'Great-aunt/Great-uncle';
                     if (fromMember?.biography) {
                       if (fromMember.biography.startsWith('M-')) {
-                        return 'बुबाकी काकी';
-                      } else if (fromMember.biography.startsWith('F-')) {
                         return 'बुबाका काका';
+                      } else if (fromMember.biography.startsWith('F-')) {
+                        return 'बुबाकी काकी';
                       }
                       else{
                         return 'बुबाका काका/काकी';
@@ -316,9 +316,9 @@ export default class RelationshipCalculator {
               //return 'Niece/Nephew';
               if (fromMember?.biography) {
                 if (fromMember.biography.startsWith('M-')) {
-                  return 'भतिजी';
-                } else if (fromMember.biography.startsWith('F-')) {
                   return 'भतिजो';
+                } else if (fromMember.biography.startsWith('F-')) {
+                  return 'भतिजी';
                 }
                 else{
                   return 'भतिजा/भतिजी';
@@ -344,9 +344,9 @@ export default class RelationshipCalculator {
                   //return 'Grand-niece/Grand-nephew';
                   if (fromMember?.biography) {
                     if (fromMember.biography.startsWith('M-')) {
-                       return 'भतिजाको छोरी';
+                      return 'भतिजाको छोरा';
                     } else if (fromMember.biography.startsWith('F-')) {
-                     return 'भतिजाको छोरा';
+                      return 'भतिजाको छोरी';
                     }
                     else{
                       return 'भतिजाको सन्तान';
@@ -374,9 +374,9 @@ export default class RelationshipCalculator {
                   //return 'First cousin';
                   if (fromMember?.biography) {
                     if (fromMember.biography.startsWith('M-')) {
-                      return 'चोचे बहिनी';
-                    } else if (fromMember.biography.startsWith('F-')) {
                       return 'चोचे भाइ';
+                    } else if (fromMember.biography.startsWith('F-')) {
+                      return 'चोचे बहिनी';
                     }
                     else{
                       return 'चोचे भाइ/बहिनी';
@@ -410,9 +410,9 @@ export default class RelationshipCalculator {
                           //return 'Second cousin';
                           if (fromMember?.biography) {
                             if (fromMember.biography.startsWith('M-')) {
-                              return 'दोस्रो चोचे बहिनी';
-                            } else if (fromMember.biography.startsWith('F-')) {
                               return 'दोस्रो चोचे भाइ';
+                            } else if (fromMember.biography.startsWith('F-')) {
+                              return 'दोस्रो चोचे बहिनी';
                             }
                             else{
                               return 'दोस्रो चोचे भाइ/बहिनी';
@@ -448,9 +448,9 @@ export default class RelationshipCalculator {
                       //return 'First cousin once removed';
                       if (fromMember?.biography) {
                         if (fromMember.biography.startsWith('M-')) {
-                          return 'चोचे नातिनी';
-                        } else if (fromMember.biography.startsWith('F-')) {
                           return 'चोचे नाति';
+                        } else if (fromMember.biography.startsWith('F-')) {
+                          return 'चोचे नातिनी';
                         }
                         else{
                           return 'चोचे नाति/नातिनी';
@@ -478,9 +478,9 @@ export default class RelationshipCalculator {
                       //return 'First cousin once removed';
                       if (fromMember?.biography) {
                         if (fromMember.biography.startsWith('M-')) {
-                          return 'चोचे नातिनी';
-                        } else if (fromMember.biography.startsWith('F-')) {
                           return 'चोचे नाति';
+                        } else if (fromMember.biography.startsWith('F-')) {
+                          return 'चोचे नातिनी';
                         }
                         else{
                           return 'चोचे नाति/नातिनी';
