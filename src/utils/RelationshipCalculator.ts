@@ -35,10 +35,10 @@ export default class RelationshipCalculator {
     if (fromMember.parentIds.includes(toId)) {
       const parent = this.members.find(m => m.id === toId);
       // Could be more specific like Father/Mother if we had gender data
-      if (fromMember?.biography) {
-        if (fromMember.biography.startsWith('M-')) {
+      if (parent?.biography) {
+        if (parent.biography.startsWith('M-')) {
           return 'बुबा';
-        } else if (fromMember.biography.startsWith('F-')) {
+        } else if (parent.biography.startsWith('F-')) {
           return 'आमा';
         }
         else{
@@ -408,10 +408,10 @@ export default class RelationshipCalculator {
                         const firstCousinOnceRemoved = this.members.find(m => m.id === firstCousinOnceRemovedId);
                         if (firstCousinOnceRemoved && firstCousinOnceRemoved.childrenIds.includes(toId)) {
                           //return 'Second cousin';
-                          if (fromMember?.biography) {
-                            if (fromMember.biography.startsWith('M-')) {
+                          if (firstCousinOnceRemoved?.biography) {
+                            if (firstCousinOnceRemoved.biography.startsWith('M-')) {
                               return 'दोस्रो चोचे भाइ';
-                            } else if (fromMember.biography.startsWith('F-')) {
+                            } else if (firstCousinOnceRemoved.biography.startsWith('F-')) {
                               return 'दोस्रो चोचे बहिनी';
                             }
                             else{
@@ -446,10 +446,10 @@ export default class RelationshipCalculator {
                     const grandAuntUncle = this.members.find(m => m.id === grandAuntUncleId);
                     if (grandAuntUncle && grandAuntUncle.childrenIds.includes(toId)) {
                       //return 'First cousin once removed';
-                      if (fromMember?.biography) {
-                        if (fromMember.biography.startsWith('M-')) {
+                      if (grandAuntUncle?.biography) {
+                        if (grandAuntUncle.biography.startsWith('M-')) {
                           return 'चोचे नाति';
-                        } else if (fromMember.biography.startsWith('F-')) {
+                        } else if (grandAuntUncle.biography.startsWith('F-')) {
                           return 'चोचे नातिनी';
                         }
                         else{
@@ -476,10 +476,10 @@ export default class RelationshipCalculator {
                     const firstCousin = this.members.find(m => m.id === firstCousinId);
                     if (firstCousin && firstCousin.childrenIds.includes(toId)) {
                       //return 'First cousin once removed';
-                      if (fromMember?.biography) {
-                        if (fromMember.biography.startsWith('M-')) {
+                      if (firstCousin?.biography) {
+                        if (firstCousin.biography.startsWith('M-')) {
                           return 'चोचे नाति';
-                        } else if (fromMember.biography.startsWith('F-')) {
+                        } else if (firstCousin.biography.startsWith('F-')) {
                           return 'चोचे नातिनी';
                         }
                         else{
