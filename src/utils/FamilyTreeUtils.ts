@@ -50,7 +50,7 @@ export const generateNodesAndEdges = (
             stroke: '#3b82f6', 
             strokeWidth: 2,
           },
-          label: 'Parent-Child',
+          label: 'अभिभावक–सन्तान',
           labelStyle: { fontSize: '12px', fontWeight: 'bold' }
         });
       }
