@@ -51,7 +51,7 @@ const Index = () => {
       const savedData = localStorage.getItem('familyTreeData');
       if (savedData) {
         const parsedData = JSON.parse(savedData);
-        setFamilyData({ ...parsedData, familyName: parsedData.familyName || "क़ूल परिवार" });
+        setFamilyData({ ...parsedData, familyName: parsedData.familyName || "क़ूल परिवार" });
         return;
       }
 
@@ -59,7 +59,7 @@ const Index = () => {
       const response = await fetch('/family-tree-data.json');
       if (response.ok) {
         const data = await response.json();
-        setFamilyData({ ...data, familyName: data.familyName || "क़ूल परिवार" });
+        setFamilyData({ ...data, familyName: data.familyName || "क़ूल परिवार" });
         localStorage.setItem('familyTreeData', JSON.stringify(data));
       }
     } catch (error) {
@@ -106,7 +106,11 @@ const Index = () => {
       spouseId: memberData.spouseId,
       parentIds: memberData.parentIds || [],
       childrenIds: memberData.childrenIds || [],
-      position: memberData.position || { x: 0, y: 0 }
+      position: memberData.position || { x: 0, y: 0 },
+      gender: memberData.gender,
+      phone: memberData.phone,
+      email: memberData.email,
+      socialMediaLink: memberData.socialMediaLink
     };
 
     const updatedMembers = [...familyData.members, newMember];

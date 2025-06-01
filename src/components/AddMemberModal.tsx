@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { X, User, Heart, Users, Phone, Mail, Globe, GenderMale, GenderFemale  } from 'lucide-react';
 import { FamilyMember } from '../types/FamilyTree';

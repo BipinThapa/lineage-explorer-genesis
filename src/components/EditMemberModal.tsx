@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { X, User, Heart, Users } from 'lucide-react';
 import { FamilyMember } from '../types/FamilyTree';
@@ -29,7 +28,7 @@ const EditMemberModal: React.FC<EditMemberModalProps> = ({
     childrenIds: [] as string[],
     gender: '',
     socialMediaLink: '',
-    phoneNumber: '',
+    phone: '',
     email: ''
   });
 
@@ -46,7 +45,7 @@ const EditMemberModal: React.FC<EditMemberModalProps> = ({
         childrenIds: member.childrenIds,
         gender: member.gender || '',
         socialMediaLink: member.socialMediaLink || '',
-        phoneNumber: member.phoneNumber || '',
+        phone: member.phone || '',
         email: member.email || ''
       });
     }
@@ -171,8 +170,8 @@ const EditMemberModal: React.FC<EditMemberModalProps> = ({
               </label>
               <input
                 type="tel"
-                value={formData.phoneNumber}
-                onChange={(e) => setFormData(prev => ({ ...prev, phoneNumber: e.target.value }))}
+                value={formData.phone}
+                onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg"
               />
             </div>

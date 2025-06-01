@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { X, Edit } from 'lucide-react';
 import { FamilyMember } from '../types/FamilyTree';
@@ -140,10 +139,10 @@ const MemberProfile: React.FC<MemberProfileProps> = ({
                     </div>
                   )}
 
-                  {member.phoneNumber && (
+                  {member.phone && (
                     <div>
                       <span className="font-medium text-gray-700">फोन नम्बर:</span>
-                      <span className="ml-2 text-gray-600">{member.phoneNumber}</span>
+                      <span className="ml-2 text-gray-600">{member.phone}</span>
                     </div>
                   )}
 
