@@ -48,7 +48,7 @@ const translations = {
     'clear.focus': 'Clear Focus',
     
     // Member details
-    'birthday': 'Birthday',
+    'Born': 'Born',
     'biography': 'Biography',
     'spouse': 'Spouse',
     'parents': 'Parents',
@@ -91,7 +91,7 @@ const translations = {
     'clear.focus': 'फोकस हटाउनुहोस्',
     
     // Member details
-    'birthday': 'जन्मदिन',
+    'Born': 'जन्मदिन',
     'biography': 'जीवनी',
     'spouse': 'जीवनसाथी',
     'parents': 'आमाबुबा',
