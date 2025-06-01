@@ -91,6 +91,12 @@ const MemberProfile: React.FC<MemberProfileProps> = ({
                 )}
                 
                 <div className="space-y-3">
+                   {member.gender && (
+                    <div>
+                      <span className="font-medium text-gray-700">लिङ्ग:</span>
+                      <span className="ml-2 text-gray-600">{member.gender}</span>
+                    </div>
+                  )}
                   {member.birthDate && (
                     <div>
                       <span className="font-medium text-gray-700">जन्म (ई.सं.):</span>
@@ -131,6 +137,34 @@ const MemberProfile: React.FC<MemberProfileProps> = ({
                       <span className="ml-2 text-gray-600">
                         {children.map(c => c!.name).join(', ')}
                       </span>
+                    </div>
+                  )}
+
+                  {member.phoneNumber && (
+                    <div>
+                      <span className="font-medium text-gray-700">फोन नम्बर:</span>
+                      <span className="ml-2 text-gray-600">{member.phoneNumber}</span>
+                    </div>
+                  )}
+
+                  {member.email && (
+                    <div>
+                      <span className="font-medium text-gray-700">इमेल:</span>
+                      <span className="ml-2 text-gray-600">{member.email}</span>
+                    </div>
+                  )}
+
+                  {member.socialMediaLink && (
+                    <div>
+                      <span className="font-medium text-gray-700">सामाजिक सञ्जाल:</span>
+                      <a
+                        href={member.socialMediaLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="ml-2 text-blue-600 hover:underline"
+                      >
+                        {member.socialMediaLink}
+                      </a>
                     </div>
                   )}
                 </div>
