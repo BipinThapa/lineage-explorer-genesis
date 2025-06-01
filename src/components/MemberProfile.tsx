@@ -93,7 +93,7 @@ const MemberProfile: React.FC<MemberProfileProps> = ({
                 <div className="space-y-3">
                   {member.birthDate && (
                     <div>
-                      <span className="font-medium text-gray-700">Born:</span>
+                      <span className="font-medium text-gray-700">जन्म (ई.सं.):</span>
                       <span className="ml-2 text-gray-600">
                         {new Date(member.birthDate).toLocaleDateString()}
                       </span>
@@ -102,7 +102,7 @@ const MemberProfile: React.FC<MemberProfileProps> = ({
                   
                   {member.deathDate && (
                     <div>
-                      <span className="font-medium text-gray-700">Died:</span>
+                      <span className="font-medium text-gray-700">निधन (ई.सं.):</span>
                       <span className="ml-2 text-gray-600">
                         {new Date(member.deathDate).toLocaleDateString()}
                       </span>
@@ -111,14 +111,14 @@ const MemberProfile: React.FC<MemberProfileProps> = ({
                   
                   {spouse && (
                     <div>
-                      <span className="font-medium text-gray-700">Spouse:</span>
+                      <span className="font-medium text-gray-700">जीवनसाथी:</span>
                       <span className="ml-2 text-gray-600">{spouse.name}</span>
                     </div>
                   )}
                   
                   {parents.length > 0 && (
                     <div>
-                      <span className="font-medium text-gray-700">Parents:</span>
+                      <span className="font-medium text-gray-700">अभिभावक:</span>
                       <span className="ml-2 text-gray-600">
                         {parents.map(p => p!.name).join(', ')}
                       </span>
@@ -127,7 +127,7 @@ const MemberProfile: React.FC<MemberProfileProps> = ({
                   
                   {children.length > 0 && (
                     <div>
-                      <span className="font-medium text-gray-700">Children:</span>
+                      <span className="font-medium text-gray-700">सन्तान:</span>
                       <span className="ml-2 text-gray-600">
                         {children.map(c => c!.name).join(', ')}
                       </span>
@@ -139,7 +139,7 @@ const MemberProfile: React.FC<MemberProfileProps> = ({
             
             {member.biography && (
               <div className="mt-6">
-                <h4 className="text-lg font-semibold text-gray-800 mb-2">Biography</h4>
+                <h4 className="text-lg font-semibold text-gray-800 mb-2">जीवन वृत्तान्त</h4>
                 <p className="text-gray-600 leading-relaxed whitespace-pre-wrap">
                   {member.biography}
                 </p>
