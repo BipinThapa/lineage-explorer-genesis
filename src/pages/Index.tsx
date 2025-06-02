@@ -51,7 +51,7 @@ const Index = () => {
       const savedData = localStorage.getItem('familyTreeData');
       if (savedData) {
         const parsedData = JSON.parse(savedData);
-        setFamilyData({ ...parsedData, familyName: parsedData.familyName || "क़ूल परिवार" });
+        setFamilyData({ ...parsedData, familyName: parsedData.familyName || "कुल परिवार" });
         return;
       }
 
@@ -59,7 +59,7 @@ const Index = () => {
       const response = await fetch('/family-tree-data.json');
       if (response.ok) {
         const data = await response.json();
-        setFamilyData({ ...data, familyName: data.familyName || "क़ूल परिवार" });
+        setFamilyData({ ...data, familyName: data.familyName || "कुल परिवार" });
         localStorage.setItem('familyTreeData', JSON.stringify(data));
       }
     } catch (error) {
