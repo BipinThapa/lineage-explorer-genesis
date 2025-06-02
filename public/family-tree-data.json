@@ -1,49 +1,58 @@
-
 {
   "members": [
     {
       "id": "1",
-      "name": "प्रेम बहादुर थापा",
+      "name": "नन्दा बहादुर थापा",
       "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img17.jpeg",
-      "biography": "M-shri. Prem Bahadur was a solder by profession.",
+      "biography": "नन्दा बहादुर थापा पेशाले एक जना सैनिक थिए।",
       "birthDate": "1920-01-01",
       "deathDate": "1960-01-01",
       "spouseId": "2",
       "parentIds": [],
       "childrenIds": [
         "3",
-        "4"
+        "4",
+        "1748823614212",
+        "1748823544258"
       ],
       "position": {
         "x": -32.089669229255605,
         "y": 179.7947543293214
       },
-      "gender": "Male"
+      "gender": "Male",
+      "socialMediaLink": "",
+      "phone": "",
+      "email": ""
     },
     {
       "id": "2",
-      "name": "******* थापा",
+      "name": "श्री ***** कुमारी थापा",
       "profilePicture": "https://png.pngtree.com/png-vector/20190118/ourmid/pngtree-vector-female-student-icon-png-image_326761.jpg",
-      "biography": "F-Female",
+      "biography": "",
       "birthDate": "1920-01-01",
       "deathDate": "1960-01-01",
       "spouseId": "1",
       "parentIds": [],
       "childrenIds": [
         "3",
-        "4"
+        "4",
+        "1748823614212",
+        "1748823544258"
       ],
       "position": {
-        "x": 224.16557299119202,
-        "y": 188.1426990287496
+        "x": 217.44974043481594,
+        "y": 180.3075610463109
       },
-      "gender": "Female"
+      "gender": "Female",
+      "socialMediaLink": "",
+      "phone": "",
+      "email": ""
     },
     {
       "id": "3",
-      "name": "क़ूल बहादुर थापा",
+      "name": "श्री कुल बहादुर थापा",
       "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img16.jpeg",
-      "biography": "M-Kul bahadur thapa-DPS-Male",
+      "biography": "श्री कुल बहादुर थापा पेशाले डिएसपी थिए।",
       "birthDate": "1940-01-01",
       "spouseId": "5",
       "parentIds": [
@@ -61,13 +70,16 @@
         "y": 574.563630502137
       },
       "deathDate": "2015-01-01",
-      "gender": "Male"
+      "gender": "Male",
+      "socialMediaLink": "",
+      "phone": "",
+      "email": ""
     },
     {
       "id": "4",
-      "name": "***** बहादुर थापा",
+      "name": "श्री ***2 बहादुर थापा",
       "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img13.jpeg",
-      "biography": "M-***** बहादुर थापा-Solder-Male",
+      "biography": "श्री ***2 बहादुर थापा",
       "birthDate": "1940-01-01",
       "spouseId": "8",
       "parentIds": [
@@ -84,13 +96,16 @@
         "y": 571.1131788180226
       },
       "deathDate": "",
-      "gender": "Male"
+      "gender": "Male",
+      "socialMediaLink": "",
+      "phone": "",
+      "email": ""
     },
     {
       "id": "5",
-      "name": "स्रि नन्दा थापा",
+      "name": "श्री नन्दा कुमारी थापा",
       "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img10.jpeg",
-      "biography": "F-Nanda Thapa-House Wife-Female",
+      "biography": "श्री नन्दा कुमारी थापा पेशाले गृहिणी हुनुहुन्छ।",
       "birthDate": "1940-01-01",
       "spouseId": "3",
       "parentIds": [],
@@ -101,17 +116,20 @@
         "1748723177564"
       ],
       "position": {
-        "x": -41.34678887022038,
-        "y": 574.7602211696712
+        "x": -40.2274834441577,
+        "y": 578.1181374478593
       },
       "deathDate": "",
-      "gender": "Female"
+      "gender": "Female",
+      "socialMediaLink": "",
+      "phone": "",
+      "email": ""
     },
     {
       "id": "6",
-      "name": "सरस्वति थापा",
+      "name": "सरस्वती थापा ",
       "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img2.jpeg",
-      "biography": "F-सरस्वति थापा-Nurse-Female",
+      "biography": "सरस्वती थापा पेशाले नर्स हुनुहुन्छ।",
       "birthDate": "1960-01-01",
       "parentIds": [],
       "childrenIds": [
@@ -123,13 +141,16 @@
       },
       "deathDate": "",
       "spouseId": "1748723177564",
-      "gender": "Female"
+      "gender": "Female",
+      "socialMediaLink": "https://www.facebook.com/saru.thapamagar.1048",
+      "phone": "+977 981-1575237",
+      "email": ""
     },
     {
       "id": "7",
-      "name": "च्हबि थापा",
+      "name": "छबी कुमारी थापा",
       "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img11.jpeg",
-      "biography": "F-च्हबि थापा-Nurse-Female",
+      "biography": "छबी कुमारी थापा पेशाले नर्स हुनुहुन्छ।",
       "birthDate": "1960-01-01",
       "spouseId": "12",
       "parentIds": [
@@ -144,13 +165,16 @@
         "y": 973.1884398478635
       },
       "deathDate": "",
-      "gender": "Female"
+      "gender": "Female",
+      "socialMediaLink": "https://www.facebook.com/chhabi.thapa.7505",
+      "phone": "9847306637",
+      "email": ""
     },
     {
       "id": "8",
-      "name": "****** थापा",
+      "name": "श्री ***2 कुमारी थापा",
       "profilePicture": "https://png.pngtree.com/png-vector/20190118/ourmid/pngtree-vector-female-student-icon-png-image_326761.jpg",
-      "biography": "F-Female",
+      "biography": "श्री ***2 कुमारी थापा",
       "birthDate": "1940-01-01",
       "spouseId": "4",
       "parentIds": [],
@@ -160,17 +184,20 @@
         "11"
       ],
       "position": {
-        "x": 659.4404311585761,
-        "y": 572.2180067027512
+        "x": 661.6790420107014,
+        "y": 587.8882826676287
       },
       "deathDate": "",
-      "gender": "Female"
+      "gender": "Female",
+      "socialMediaLink": "",
+      "phone": "",
+      "email": ""
     },
     {
       "id": "9",
-      "name": "रिना थापा",
+      "name": "रीना कुमारी थापा",
       "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img1.jpeg",
-      "biography": "F-रिना थापा-House Wife- Female",
+      "biography": "रीना कुमारी थापा पेशाले गृहिणी हुनुहुन्छ।",
       "birthDate": "1960-01-01",
       "parentIds": [],
       "childrenIds": [
@@ -182,13 +209,16 @@
       },
       "deathDate": "",
       "spouseId": "10",
-      "gender": "Female"
+      "gender": "Female",
+      "socialMediaLink": "https://www.facebook.com/reena.thapa.3994885",
+      "phone": "9811503250",
+      "email": ""
     },
     {
       "id": "10",
-      "name": "चन्द्र बहादुर थापा",
+      "name": "चन्द्र बहादुर थापा ",
       "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img15.jpeg",
-      "biography": "M-चन्द्र बहादुर थापा-Business-Male",
+      "biography": "चन्द्र बहादुर थापा पेशाले व्यवसायी हुनुहुन्छ।",
       "birthDate": "1960-01-01",
       "parentIds": [
         "3",
@@ -203,13 +233,16 @@
       },
       "deathDate": "",
       "spouseId": "9",
-      "gender": "Male"
+      "gender": "Male",
+      "socialMediaLink": "https://www.facebook.com/profile.php?id=100020661937531",
+      "phone": "+977 981-4439265",
+      "email": ""
     },
     {
       "id": "11",
-      "name": "डोर्न्ना बहादुर थापा",
+      "name": "द्रोण बहादुर थापा",
       "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img5.jpeg",
-      "biography": "M-डोर्न्ना बहादुर थापा-Agriculture officer-Male",
+      "biography": "द्रोण बहादुर थापा पेशाले कृषि अधिकृत हुनुहुन्छ।",
       "birthDate": "1960-01-01",
       "spouseId": "14",
       "parentIds": [
@@ -225,13 +258,16 @@
         "y": 973.4823668255041
       },
       "deathDate": "",
-      "gender": "Male"
+      "gender": "Male",
+      "socialMediaLink": "https://www.facebook.com/profile.php?id=100010219066793",
+      "phone": "+919300203722",
+      "email": ""
     },
     {
       "id": "12",
-      "name": "डोलख रस्कोति",
+      "name": "दोलख रास्कोटी ",
       "profilePicture": "https://png.pngtree.com/png-vector/20190411/ourmid/pngtree-business-male-icon-vector-png-image_916468.jpg",
-      "biography": "M-डोलख रस्कोति-lawyer-Male",
+      "biography": "दोलख रास्कोटी  पेशाले कानुन व्यवसायी हुनुहुन्छ।",
       "birthDate": "1960-01-01",
       "spouseId": "7",
       "parentIds": [],
@@ -243,13 +279,16 @@
         "y": 974.6751096218354
       },
       "deathDate": "",
-      "gender": "Male"
+      "gender": "Male",
+      "socialMediaLink": "https://www.facebook.com/raskoti.dolakh",
+      "phone": "9847028739",
+      "email": ""
     },
     {
       "id": "13",
-      "name": "निशान्क रास्कोति",
+      "name": "निशाङ्क रास्कोटी",
       "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img3.jpeg",
-      "biography": "M-निशान्क रास्कोति-Solder-Male",
+      "biography": "निशाङ्क रास्कोटी पेशाले नर्स र सैनिक हुन्।",
       "birthDate": "1994-01-01",
       "parentIds": [
         "7",
@@ -262,13 +301,16 @@
       },
       "deathDate": "",
       "spouseId": "",
-      "gender": "Male"
+      "gender": "Male",
+      "socialMediaLink": "https://www.facebook.com/hell.punk.79",
+      "phone": "9821400833",
+      "email": ""
     },
     {
       "id": "14",
       "name": "नन्दा थापा",
       "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img4.jpeg",
-      "biography": "F-नन्दा थापा-House Wife-Female",
+      "biography": "नन्दा थापा पेशाले गृहिणी हुनुहुन्छ।",
       "birthDate": "1960-01-01",
       "spouseId": "11",
       "parentIds": [],
@@ -280,13 +322,16 @@
         "y": 975.9000400553482
       },
       "deathDate": "",
-      "gender": "Female"
+      "gender": "Female",
+      "socialMediaLink": "https://www.facebook.com/nanda.thapa.90038",
+      "phone": "+919300203722",
+      "email": ""
     },
     {
       "id": "1748716213295",
-      "name": "सोनिआ थापा",
+      "name": "सोनिया थापा",
       "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img8.jpeg",
-      "biography": "F-सोनिआ थापा-Nurse-Female",
+      "biography": "सोनिया थापा पेशाले नर्स हुन्।",
       "birthDate": "1990-01-01",
       "deathDate": "",
       "spouseId": "1748725819011",
@@ -301,13 +346,16 @@
         "x": 1282.4594738677154,
         "y": 1318.3603963335588
       },
-      "gender": "Female"
+      "gender": "Female",
+      "socialMediaLink": "https://www.facebook.com/sonia.thapa.528",
+      "phone": "+12402102370",
+      "email": ""
     },
     {
       "id": "1748723177564",
       "name": "जित बहादुर थापा",
       "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img14.jpeg",
-      "biography": "M-जित बहादुर थापा-Doctor-Male",
+      "biography": "जित बहादुर थापा पेशाले डाक्टर हुनुहुन्छ।",
       "birthDate": "1960-01-01",
       "deathDate": "",
       "spouseId": "6",
@@ -322,13 +370,16 @@
         "x": -687.0192130394676,
         "y": 975.5383552229277
       },
-      "gender": "Male"
+      "gender": "Male",
+      "socialMediaLink": "https://www.facebook.com/luish.jit",
+      "phone": "+977 982-1418488",
+      "email": ""
     },
     {
       "id": "1748724805223",
-      "name": "बिसाल थापा",
+      "name": "विशाल थापा",
       "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img12.jpeg",
-      "biography": "M-बिसाल थापा-Software Engineer-Male",
+      "biography": "विशाल थापा पेशाले सफ्टवेयर इन्जिनियर हुन्।",
       "birthDate": "1990-01-01",
       "deathDate": "",
       "spouseId": "",
@@ -341,13 +392,16 @@
         "x": 968.3751085312165,
         "y": 1322.646736958166
       },
-      "gender": "Male"
+      "gender": "Male",
+      "socialMediaLink": "https://www.facebook.com/bishalthapa89",
+      "phone": "+917587235164",
+      "email": ""
     },
     {
       "id": "1748725026444",
-      "name": "स्नेहा थापा",
+      "name": "स्नेहा थापा ",
       "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img6.jpeg",
-      "biography": "F-स्नेहा थापा-Student-Female",
+      "biography": "स्नेहा थापा पेशाले विद्यार्थी हुन्।",
       "birthDate": "1980-01-01",
       "deathDate": "",
       "spouseId": "",
@@ -360,13 +414,16 @@
         "x": -556.4921685565937,
         "y": 1318.7697990814097
       },
-      "gender": "Female"
+      "gender": "Female",
+      "socialMediaLink": "https://www.facebook.com/profile.php?id=61576461866817",
+      "phone": "+9779700525031",
+      "email": ""
     },
     {
       "id": "1748725392053",
-      "name": "बिपिन थापा",
+      "name": "बिपिन थापा ",
       "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img20.jpeg",
-      "biography": "M-बिपिन थापा-Software Engineer-Male",
+      "biography": "बिपिन थापा पेशाले सफ्टवेयर इन्जिनियर हुन्।",
       "birthDate": "1992-01-01",
       "deathDate": "",
       "spouseId": "",
@@ -379,13 +436,16 @@
         "x": -24.57627648530422,
         "y": 1314.0031298512479
       },
-      "gender": "Male"
+      "gender": "Male",
+      "socialMediaLink": "https://www.facebook.com/bipin.thapa.923",
+      "phone": "9806957787",
+      "email": "bipzzzlogin@gmail.com"
     },
     {
       "id": "1748725819011",
-      "name": "नेत्रा झेदि मगर",
+      "name": "नेत्र झेंडी मगर",
       "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img9.jpeg",
-      "biography": "M-नेत्रा झेदि मगर-Business-Male",
+      "biography": "नेत्र झेंडी मगर पेशाले व्यवसायी हुन्।",
       "birthDate": "1990-01-01",
       "deathDate": "",
       "spouseId": "1748716213295",
@@ -397,13 +457,16 @@
         "x": 1532.3105010270526,
         "y": 1331.544481036778
       },
-      "gender": "Male"
+      "gender": "Male",
+      "socialMediaLink": "https://www.facebook.com/njhedi",
+      "phone": "+12402102370",
+      "email": ""
     },
     {
       "id": "1748726010084",
-      "name": "सोनिश झेदि मगर",
+      "name": "सोनिश झेंडी मगर",
       "profilePicture": "https://raw.githubusercontent.com/BipinThapa/lineage-explorer-genesis/refs/heads/main/img/img7.jpeg",
-      "biography": "M-सोनिश झेदि मगर-Student-Male",
+      "biography": "सोनिश झेंडी मगर",
       "birthDate": "2020-01-01",
       "deathDate": "",
       "spouseId": "",
@@ -416,7 +479,92 @@
         "x": 1411.9684617746461,
         "y": 1623.338571827735
       },
-      "gender": "Male"
+      "gender": "Male",
+      "socialMediaLink": "",
+      "phone": "",
+      "email": ""
+    },
+    {
+      "id": "1748823544258",
+      "name": "श्री ***4 बहादुर थापा",
+      "profilePicture": "https://png.pngtree.com/png-vector/20190411/ourmid/pngtree-business-male-icon-vector-png-image_916468.jpg",
+      "biography": "श्री ***4 बहादुर थापा",
+      "birthDate": "1940-01-01",
+      "deathDate": "",
+      "spouseId": "1748823811701",
+      "parentIds": [
+        "1",
+        "2"
+      ],
+      "childrenIds": [],
+      "position": {
+        "x": 1699.6145930755595,
+        "y": 587.9382598291951
+      },
+      "gender": "Male",
+      "phone": "",
+      "email": "",
+      "socialMediaLink": ""
+    },
+    {
+      "id": "1748823614212",
+      "name": "श्री ***3 बहादुर थापा",
+      "profilePicture": "https://png.pngtree.com/png-vector/20190411/ourmid/pngtree-business-male-icon-vector-png-image_916468.jpg",
+      "biography": "श्री ***3 बहादुर थापा",
+      "birthDate": "1940-01-01",
+      "deathDate": "",
+      "spouseId": "1748823756436",
+      "parentIds": [
+        "1",
+        "2"
+      ],
+      "childrenIds": [],
+      "position": {
+        "x": 1072.519959111026,
+        "y": 585.3463579390412
+      },
+      "gender": "Male",
+      "phone": "",
+      "email": "",
+      "socialMediaLink": ""
+    },
+    {
+      "id": "1748823756436",
+      "name": "श्री ***3 कुमारी थापा",
+      "profilePicture": "https://png.pngtree.com/png-vector/20190118/ourmid/pngtree-vector-female-student-icon-png-image_326761.jpg",
+      "biography": "श्री ***3 कुमारी थापा",
+      "birthDate": "1940-01-01",
+      "deathDate": "",
+      "spouseId": "1748823614212",
+      "parentIds": [],
+      "childrenIds": [],
+      "position": {
+        "x": 1318.301296757122,
+        "y": 583.06992142685
+      },
+      "gender": "Female",
+      "phone": "",
+      "email": "",
+      "socialMediaLink": ""
+    },
+    {
+      "id": "1748823811701",
+      "name": "श्री ***4 कुमारी थापा",
+      "profilePicture": "https://png.pngtree.com/png-vector/20190118/ourmid/pngtree-vector-female-student-icon-png-image_326761.jpg",
+      "biography": "श्री ***4 कुमारी थापा",
+      "birthDate": "1940-01-01",
+      "deathDate": "",
+      "spouseId": "1748823544258",
+      "parentIds": [],
+      "childrenIds": [],
+      "position": {
+        "x": 1950.948452423483,
+        "y": 601.113156821279
+      },
+      "gender": "Female",
+      "phone": "",
+      "email": "",
+      "socialMediaLink": ""
     }
   ],
   "familyName": "क़ूल परिवार"
