@@ -43,20 +43,20 @@ export class DirectRelationships {
   }
 
   private getSpouseRelationship(member: RelationshipMember): string {
-    if (member.gender === 'male') return NEPALI_RELATIONSHIPS.HUSBAND;
-    if (member.gender === 'female') return NEPALI_RELATIONSHIPS.WIFE;
+    if (member.gender === 'Male') return NEPALI_RELATIONSHIPS.HUSBAND;
+    if (member.gender === 'Female') return NEPALI_RELATIONSHIPS.WIFE;
     return NEPALI_RELATIONSHIPS.SPOUSE;
   }
 
   private getParentRelationship(member: RelationshipMember): string {
-    if (member.gender === 'male') return NEPALI_RELATIONSHIPS.FATHER;
-    if (member.gender === 'female') return NEPALI_RELATIONSHIPS.MOTHER;
+    if (member.gender === 'Male') return NEPALI_RELATIONSHIPS.FATHER;
+    if (member.gender === 'Female') return NEPALI_RELATIONSHIPS.MOTHER;
     return NEPALI_RELATIONSHIPS.PARENT;
   }
 
   private getChildRelationship(member: RelationshipMember): string {
-    if (member.gender === 'male') return NEPALI_RELATIONSHIPS.SON;
-    if (member.gender === 'female') return NEPALI_RELATIONSHIPS.DAUGHTER;
+    if (member.gender === 'Male') return NEPALI_RELATIONSHIPS.SON;
+    if (member.gender === 'Female') return NEPALI_RELATIONSHIPS.DAUGHTER;
     return NEPALI_RELATIONSHIPS.CHILD;
   }
 
@@ -72,17 +72,17 @@ export class DirectRelationships {
       // Full siblings
       const isOlder = this.isOlderSibling(toMember, fromMember);
       
-      if (toMember.gender === 'male') {
+      if (toMember.gender === 'Male') {
         return isOlder ? NEPALI_RELATIONSHIPS.ELDER_BROTHER : NEPALI_RELATIONSHIPS.BROTHER;
-      } else if (toMember.gender === 'female') {
+      } else if (toMember.gender === 'Female') {
         return isOlder ? NEPALI_RELATIONSHIPS.ELDER_SISTER : NEPALI_RELATIONSHIPS.SISTER;
       } else {
         return NEPALI_RELATIONSHIPS.SIBLING;
       }
     } else {
       // Half siblings
-      if (toMember.gender === 'male') return NEPALI_RELATIONSHIPS.HALF_BROTHER;
-      if (toMember.gender === 'female') return NEPALI_RELATIONSHIPS.HALF_SISTER;
+      if (toMember.gender === 'Male') return NEPALI_RELATIONSHIPS.HALF_BROTHER;
+      if (toMember.gender === 'Female') return NEPALI_RELATIONSHIPS.HALF_SISTER;
       return NEPALI_RELATIONSHIPS.HALF_SIBLING;
     }
   }
@@ -95,15 +95,15 @@ export class DirectRelationships {
 
     // Parent-in-law
     if (spouse.parentIds.includes(toMember.id)) {
-      if (toMember.gender === 'male') return NEPALI_RELATIONSHIPS.FATHER_IN_LAW;
-      if (toMember.gender === 'female') return NEPALI_RELATIONSHIPS.MOTHER_IN_LAW;
+      if (toMember.gender === 'Male') return NEPALI_RELATIONSHIPS.FATHER_IN_LAW;
+      if (toMember.gender === 'Female') return NEPALI_RELATIONSHIPS.MOTHER_IN_LAW;
       return NEPALI_RELATIONSHIPS.PARENT_IN_LAW;
     }
     
     // Child-in-law
     if (spouse.childrenIds.includes(toMember.id)) {
-      if (toMember.gender === 'male') return NEPALI_RELATIONSHIPS.SON_IN_LAW;
-      if (toMember.gender === 'female') return NEPALI_RELATIONSHIPS.DAUGHTER_IN_LAW;
+      if (toMember.gender === 'Male') return NEPALI_RELATIONSHIPS.SON_IN_LAW;
+      if (toMember.gender === 'Female') return NEPALI_RELATIONSHIPS.DAUGHTER_IN_LAW;
       return NEPALI_RELATIONSHIPS.CHILD_IN_LAW;
     }
     
@@ -114,9 +114,9 @@ export class DirectRelationships {
     if (spouseSharedParents.length > 0) {
       const isOlder = this.isOlderSibling(spouse, toMember);
       
-      if (toMember.gender === 'male') {
+      if (toMember.gender === 'Male') {
         return isOlder ? NEPALI_RELATIONSHIPS.ELDER_BROTHER : NEPALI_RELATIONSHIPS.BROTHER;
-      } else if (toMember.gender === 'female') {
+      } else if (toMember.gender === 'Female') {
         return isOlder ? NEPALI_RELATIONSHIPS.ELDER_SISTER : NEPALI_RELATIONSHIPS.SISTER;
       } else {
         return 'देवर/भाउजू';
