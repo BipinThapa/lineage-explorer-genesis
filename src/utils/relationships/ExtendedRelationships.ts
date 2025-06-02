@@ -49,8 +49,8 @@ export class ExtendedRelationships {
     for (const parentId of fromMember.parentIds) {
       const parent = this.members.find(m => m.id === parentId);
       if (parent && parent.parentIds.includes(toMember.id)) {
-        if (toMember.gender === 'male') return NEPALI_RELATIONSHIPS.GRANDFATHER;
-        if (toMember.gender === 'female') return NEPALI_RELATIONSHIPS.GRANDMOTHER;
+        if (toMember.gender === 'Male') return NEPALI_RELATIONSHIPS.GRANDFATHER;
+        if (toMember.gender === 'Female') return NEPALI_RELATIONSHIPS.GRANDMOTHER;
         return NEPALI_RELATIONSHIPS.GRANDPARENT;
       }
     }
@@ -59,8 +59,8 @@ export class ExtendedRelationships {
     for (const childId of fromMember.childrenIds) {
       const child = this.members.find(m => m.id === childId);
       if (child && child.childrenIds.includes(toMember.id)) {
-        if (toMember.gender === 'male') return NEPALI_RELATIONSHIPS.GRANDSON;
-        if (toMember.gender === 'female') return NEPALI_RELATIONSHIPS.GRANDDAUGHTER;
+        if (toMember.gender === 'Male') return NEPALI_RELATIONSHIPS.GRANDSON;
+        if (toMember.gender === 'Female') return NEPALI_RELATIONSHIPS.GRANDDAUGHTER;
         return NEPALI_RELATIONSHIPS.GRANDCHILD;
       }
     }
@@ -76,8 +76,8 @@ export class ExtendedRelationships {
         for (const grandparentId of parent.parentIds) {
           const grandparent = this.members.find(m => m.id === grandparentId);
           if (grandparent && grandparent.parentIds.includes(toMember.id)) {
-            if (toMember.gender === 'male') return NEPALI_RELATIONSHIPS.GREAT_GRANDFATHER;
-            if (toMember.gender === 'female') return NEPALI_RELATIONSHIPS.GREAT_GRANDMOTHER;
+            if (toMember.gender === 'Male') return NEPALI_RELATIONSHIPS.GREAT_GRANDFATHER;
+            if (toMember.gender === 'Female') return NEPALI_RELATIONSHIPS.GREAT_GRANDMOTHER;
             return NEPALI_RELATIONSHIPS.GREAT_GRANDPARENT;
           }
         }
@@ -91,8 +91,8 @@ export class ExtendedRelationships {
         for (const grandchildId of child.childrenIds) {
           const grandchild = this.members.find(m => m.id === grandchildId);
           if (grandchild && grandchild.childrenIds.includes(toMember.id)) {
-            if (toMember.gender === 'male') return NEPALI_RELATIONSHIPS.GREAT_GRANDSON;
-            if (toMember.gender === 'female') return NEPALI_RELATIONSHIPS.GREAT_GRANDDAUGHTER;
+            if (toMember.gender === 'Male') return NEPALI_RELATIONSHIPS.GREAT_GRANDSON;
+            if (toMember.gender === 'Female') return NEPALI_RELATIONSHIPS.GREAT_GRANDDAUGHTER;
             return NEPALI_RELATIONSHIPS.GREAT_GRANDCHILD;
           }
         }
@@ -112,9 +112,9 @@ export class ExtendedRelationships {
           if (grandparent && grandparent.childrenIds.includes(toMember.id) && toMember.id !== parentId) {
             const isOlder = this.directRelations.isOlderSibling(toMember, parent);
             
-            if (toMember.gender === 'male') {
+            if (toMember.gender === 'Male') {
               return isOlder ? NEPALI_RELATIONSHIPS.ELDER_UNCLE : NEPALI_RELATIONSHIPS.YOUNGER_UNCLE;
-            } else if (toMember.gender === 'female') {
+            } else if (toMember.gender === 'Female') {
               return isOlder ? NEPALI_RELATIONSHIPS.ELDER_AUNT : NEPALI_RELATIONSHIPS.YOUNGER_AUNT;
             } else {
               return NEPALI_RELATIONSHIPS.UNCLE_AUNT;
@@ -132,8 +132,8 @@ export class ExtendedRelationships {
           if (siblingId !== fromMember.id) {
             const sibling = this.members.find(m => m.id === siblingId);
             if (sibling && sibling.childrenIds.includes(toMember.id)) {
-              if (toMember.gender === 'male') return NEPALI_RELATIONSHIPS.NEPHEW;
-              if (toMember.gender === 'female') return NEPALI_RELATIONSHIPS.NIECE;
+              if (toMember.gender === 'Male') return NEPALI_RELATIONSHIPS.NEPHEW;
+              if (toMember.gender === 'Female') return NEPALI_RELATIONSHIPS.NIECE;
               return NEPALI_RELATIONSHIPS.NEPHEW_NIECE;
             }
           }
@@ -152,8 +152,8 @@ export class ExtendedRelationships {
               for (const nieceNephewId of sibling.childrenIds) {
                 const nieceNephew = this.members.find(m => m.id === nieceNephewId);
                 if (nieceNephew && nieceNephew.childrenIds.includes(toMember.id)) {
-                  if (toMember.gender === 'male') return NEPALI_RELATIONSHIPS.NEPHEW_SON;
-                  if (toMember.gender === 'female') return NEPALI_RELATIONSHIPS.NEPHEW_DAUGHTER;
+                  if (toMember.gender === 'Male') return NEPALI_RELATIONSHIPS.NEPHEW_SON;
+                  if (toMember.gender === 'Female') return NEPALI_RELATIONSHIPS.NEPHEW_DAUGHTER;
                   return NEPALI_RELATIONSHIPS.NEPHEW_CHILD;
                 }
               }
@@ -178,8 +178,8 @@ export class ExtendedRelationships {
               if (auntUncleId !== parentId) {
                 const auntUncle = this.members.find(m => m.id === auntUncleId);
                 if (auntUncle && auntUncle.childrenIds.includes(toMember.id)) {
-                  if (toMember.gender === 'male') return NEPALI_RELATIONSHIPS.COUSIN_BROTHER;
-                  if (toMember.gender === 'female') return NEPALI_RELATIONSHIPS.COUSIN_SISTER;
+                  if (toMember.gender === 'Male') return NEPALI_RELATIONSHIPS.COUSIN_BROTHER;
+                  if (toMember.gender === 'Female') return NEPALI_RELATIONSHIPS.COUSIN_SISTER;
                   return NEPALI_RELATIONSHIPS.COUSIN_SIBLING;
                 }
               }
@@ -203,8 +203,8 @@ export class ExtendedRelationships {
             for (const greatGrandparentId of grandparent.parentIds) {
               const greatGrandparent = this.members.find(m => m.id === greatGrandparentId);
               if (greatGrandparent && greatGrandparent.childrenIds.includes(toMember.id) && toMember.id !== grandparentId) {
-                if (toMember.gender === 'male') return NEPALI_RELATIONSHIPS.GREAT_UNCLE;
-                if (toMember.gender === 'female') return NEPALI_RELATIONSHIPS.GREAT_AUNT;
+                if (toMember.gender === 'Male') return NEPALI_RELATIONSHIPS.GREAT_UNCLE;
+                if (toMember.gender === 'Female') return NEPALI_RELATIONSHIPS.GREAT_AUNT;
                 return NEPALI_RELATIONSHIPS.GREAT_UNCLE_AUNT;
               }
             }
@@ -233,8 +233,8 @@ export class ExtendedRelationships {
                     if (grandAuntUncle) {
                       // Check if toMember is parent's first cousin
                       if (grandAuntUncle.childrenIds.includes(toMember.id)) {
-                        if (toMember.gender === 'male') return NEPALI_RELATIONSHIPS.COUSIN_BROTHER;
-                        if (toMember.gender === 'female') return NEPALI_RELATIONSHIPS.COUSIN_SISTER;
+                        if (toMember.gender === 'Male') return NEPALI_RELATIONSHIPS.COUSIN_BROTHER;
+                        if (toMember.gender === 'Female') return NEPALI_RELATIONSHIPS.COUSIN_SISTER;
                         return NEPALI_RELATIONSHIPS.COUSIN_UNCLE;
                       }
                       
@@ -242,8 +242,8 @@ export class ExtendedRelationships {
                       for (const firstCousinOnceRemovedId of grandAuntUncle.childrenIds) {
                         const firstCousinOnceRemoved = this.members.find(m => m.id === firstCousinOnceRemovedId);
                         if (firstCousinOnceRemoved && firstCousinOnceRemoved.childrenIds.includes(toMember.id)) {
-                          if (toMember.gender === 'male') return NEPALI_RELATIONSHIPS.SECOND_COUSIN_BROTHER;
-                          if (toMember.gender === 'female') return NEPALI_RELATIONSHIPS.SECOND_COUSIN_SISTER;
+                          if (toMember.gender === 'Male') return NEPALI_RELATIONSHIPS.SECOND_COUSIN_BROTHER;
+                          if (toMember.gender === 'Female') return NEPALI_RELATIONSHIPS.SECOND_COUSIN_SISTER;
                           return NEPALI_RELATIONSHIPS.SECOND_COUSIN_SIBLING;
                         }
                       }
@@ -261,8 +261,8 @@ export class ExtendedRelationships {
                   for (const firstCousinId of auntUncle.childrenIds) {
                     const firstCousin = this.members.find(m => m.id === firstCousinId);
                     if (firstCousin && firstCousin.childrenIds.includes(toMember.id)) {
-                      if (toMember.gender === 'male') return NEPALI_RELATIONSHIPS.COUSIN_GRANDSON;
-                      if (toMember.gender === 'female') return NEPALI_RELATIONSHIPS.COUSIN_GRANDDAUGHTER;
+                      if (toMember.gender === 'Male') return NEPALI_RELATIONSHIPS.COUSIN_GRANDSON;
+                      if (toMember.gender === 'Female') return NEPALI_RELATIONSHIPS.COUSIN_GRANDDAUGHTER;
                       return NEPALI_RELATIONSHIPS.COUSIN_GRANDCHILD;
                     }
                   }
